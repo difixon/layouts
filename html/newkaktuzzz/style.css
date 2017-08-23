@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&subset=cyrillic');
-@import url('template.css');
 html, body{font: 12px/18px "Open Sans", Arial, Helvetica, sans-serif; height:1000px;}
 ul,li {padding:0;margin:0;list-style-type:none;}
 a {color:#e67918;}
