@@ -1,13 +1,13 @@
 $(document).ready(function() {
-	
+
 	$('.click-whiteseo').click(function() {
 	   $('.drop-whiteseo').slideToggle();
 	   $(this).toggleClass('active');
-	   
+
 	   return false;
 	});
 
-	$("#slides").slick({
+	$("#slides").not('.slick-initialized').slick({
 		lazyLoad:'ondemand',
 		arrows:true,
 		autoplay:false,
@@ -17,8 +17,8 @@ $(document).ready(function() {
 		nextArrow:'<a class="slick-next"></a>',
 		prevArrow:'<a class="slick-prev"></a>'
 	});
-	
-	$(".reviews .feedbacks-list").slick({
+
+	$(".reviews .feedbacks-list").not('.slick-initialized').slick({
 		lazyLoad:'ondemand',
 		arrows:true,
 		autoplay:false,
@@ -46,15 +46,15 @@ $(document).ready(function() {
 			}
 		]
 	});
-	
+
 	$('.list .type').click(function() {
 	    $.magnificPopup.close();
-		$('.type').removeClass('active'); 
-		$(this).addClass('active'); 
-		$('#mycity').html($(this).data('city')); return false; 
+		$('.type').removeClass('active');
+		$(this).addClass('active');
+		$('#mycity').html($(this).data('city')); return false;
 	});
-	
-	$("#clients").slick({
+
+	$("#clients").not('.slick-initialized').slick({
 		autoplay:true,
 		autoplaySpeed:4000,
 		dots:false,
@@ -83,8 +83,8 @@ $(document).ready(function() {
 			}
 		]
 	});
-	
-	$("#fullinfo").slick({
+
+	$("#fullinfo").not('.slick-initialized').slick({
 		autoplay:false,
 		dots:true,
 		speed:500,
@@ -93,9 +93,9 @@ $(document).ready(function() {
 		nextArrow:'<a class="slick-next"></a>',
 		prevArrow:'<a class="slick-prev"></a>'
 	});
-	
-	
-	$("#cases").slick({
+
+
+	$("#cases").not('.slick-initialized').slick({
 		arrows:true,
 		autoplay:false,
 		dots:false,
@@ -105,7 +105,7 @@ $(document).ready(function() {
 		prevArrow:'<a class="slick-prev"></a>',
 		adaptiveHeight:true
 	});
-		
+
 	$('.menu-xs li a').on('click', function() {
 		var n = $(this).data('td');
 		var table = $(this).parents('table');
@@ -116,58 +116,58 @@ $(document).ready(function() {
 		$(this).parent('li').addClass('active');
 		return false;
 	});
-	
+
 	$('.count').click(function () {
         $('.step').removeClass('active');
         $(this).closest('.step').addClass('active');
         return false;
     });
-	
+
 	$('.title-step').click(function () {
         $('.step').removeClass('active');
         $(this).closest('.step').addClass('active');
-        
+
         $('html, body').animate({
             scrollTop: $(this).closest('.step').offset().top
         }, 1000);
         return false;
     });
-	
+
 	$('.step .count').click(function() {
-	    $('.step .str').hide(); 
+	    $('.step .str').hide();
 	});
-	
+
 	$('.first-step .count').click(function() {
-	    $('.step .str').show(); 
+	    $('.step .str').show();
 	});
-	
+
 	$('.types').click(function() {
-	   $('.city-block').show(); 
+	   $('.city-block').show();
 	   var id = $(this).attr('id');
 	   if (id == 'type1') {
-			$('.city-block .type').show(); 
+			$('.city-block .type').show();
 	   }
 	   else {
-			$('.city-block .type').hide(); 
-			$('.city-block .city-' + id).show(); 
+			$('.city-block .type').hide();
+			$('.city-block .city-' + id).show();
 	   }
 	   $('.types').removeClass('active');
 	   $(this).addClass('active');
 	   return false;
 	});
-	
+
 	$('ul.region-tab-list li a').on('click',function(){
        $('ul.region-tab-list li.active').removeClass('active');
-       $(this).parent('li').addClass('active');    
-      
+       $(this).parent('li').addClass('active');
+
        var index = $('ul.region-tab-list li a').index(this);
-      
+
        $('.region-tab-content.active').removeClass('active');
-       $('.region-tab-content').eq(index).addClass('active');   
-      
+       $('.region-tab-content').eq(index).addClass('active');
+
        return false;
     });
-	
+
 	$("#redesignform").validate({
 		rules: {
 			phone: "required"
@@ -176,12 +176,12 @@ $(document).ready(function() {
 			phone: "Укажите свой телефон или email"
 		}
 	});
-	
+
 	$(".formmodal").magnificPopup({
 		type:'inline'
 	});
-		
-	
+
+
     $("#regseoform").validate({
 		rules: {
 			email: "required"
@@ -202,8 +202,8 @@ $(document).ready(function() {
 					yaCounter36235.reachGoal('Hochu_v_top3');
 					$(form).trigger('reset');
 				}
-			});	
+			});
 		}
 	});
-	
+
 });

@@ -8,6 +8,17 @@ a:hover {color:#ff9e19;text-decoration:underline;}
 .clogo a{color:#333331; font-size:24px;font-family: 'Comfortaa';transition: all .2s;text-decoration: none;}
 .clogo a:hover{text-decoration:none;color:#555551;text-decoration: none;}
 header{z-index:25;}
+.sticky-header header .navbar.hero {height:50px; line-height: 50px;}
+.sticky-header header .navbar.hero .nav li {height:50px; line-height: 50px;}
+.sticky-header header .navbar.hero .nav li a {text-decoration: none;}
+.sticky-header header .zay-btn a {line-height: 50px;text-decoration: none;}
+.sticky-header header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+		height:50px;
+    z-index: 4000;
+}
 @media (max-width: 991px) {
 	header .zay-btn  a{display:none;}
 	header .clogo {text-align:center;}
