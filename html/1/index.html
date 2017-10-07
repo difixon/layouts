@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>form</title>
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <article class="block decrypt-drtv clearfix ng-scope">
+      <section class="col-md-4 col-sm-6">
+        <h4 style="margin-top:0;" class="ng-scope">How would you like to access your wallet?</h4>
+        <label class="radio">
+          <input type="radio" value="metamask" name="radios" class="ng-valid ng-not-empty ng-dirty ng-touched"><span>Metamask / Mist</span>
+        </label>
+        <label class="radio">
+          <input type="radio" value="ledger" name="radios" class="ng-valid ng-not-empty ng-dirty ng-touched"><span>Ledger Wallet</span>
+        </label>
+        <label class="radio">
+          <input type="radio" value="trezor" name="radios" class="ng-valid ng-not-empty ng-dirty ng-touched"><span>TREZOR</span>
+        </label>
+        <label class="radio">
+          <input type="radio" value="digitalBitbox" name="radios" class="ng-valid ng-not-empty ng-dirty ng-touched"><span>Digital Bitbox</span>
+        </label>
+        <label class="radio">
+          <input type="radio" value="fileupload" name="radios" class="ng-valid ng-not-empty ng-dirty ng-touched"><span>Keystore File (UTC / JSON)</span>
+        </label>
+        <label class="radio">
+          <input type="radio" value="mnemonicphrase" name="radios" class="ng-valid ng-not-empty ng-dirty ng-touched"><span>Mnemonic Phrase</span>
+        </label>
+        <label class="radio">
+          <input type="radio" value="pasteprivkey" name="radios" class="ng-valid ng-not-empty ng-dirty ng-touched"><span>Private Key</span>
+        </label>
+        <label class="radio">
+          <input type="radio" value="addressonly" name="radios" class="ng-valid ng-not-empty ng-dirty ng-touched"><span>View with Address Only</span>
+        </label>
+        <label class="radio"><span translate="x_ParityPhrase" class="ng-scope">Parity Phrase</span>:<a href="#" target="_blank" rel="noopener">No longer supported</a></label>
+      </section>
+      <section class="col-md-4 col-sm-6"><br>
+        <div id="selectedTypeMetamask" class="ng-scope hidden">
+          <p id="aria2" tabinex="0" class="text-danger ng-scope ng-hide">You must access MyEtherWallet via a secure (SSL / HTTPS) connection to connect.</p>
+          <div class="form-group"><a id="aria3" tabindex="0" role="button" class="btn btn-primary btn-block ng-scope">Connect to MetaMask</a></div>
+          <div style="margin-top: 1rem;" class="text-center"><a tabindex="0" role="button" href="#" target="_blank" rel="noopener" class="btn btn-default btn-xs"></a>Download MetaMask</div>
+        </div>
+        <div id="selectedTypeLedger" class="ng-scope hidden">
+          <ol>
+            <li id="aria2" tabinex="0" class="text-danger ng-scope ng-hide">You must access MyEtherWallet via a secure (SSL / HTTPS) connection to connect.</li>
+            <li tabinex="0"><span class="ng-scope">Connect your Ledger Wallet</span>&<span class="ng-scope">Open the Ethereum application (or a contract application)</span></li>
+            <li tabinex="0" class="ng-scope">Verify that Browser Support is enabled in Settings</li>
+            <li tabinex="0" class="ng-scope">If no Browser Support is found in settings, verify that you have<a target="_blank" rel="noopener" href="https://www.ledgerwallet.com/apps/manager">Firmware >1.2</a></li>
+          </ol>
+          <p role="alert" class="text-center text-danger ng-hide"><strong class="ng-binding"></strong></p>
+          <div class="text-center">
+            <p>Guides:<br><a href="http://support.ledgerwallet.com/knowledge_base/topics/how-to-use-myetherwallet-with-ledger" target="_blank" rel="noopener"></a>How to use MyEtherWallet with your Nano S<br><a href="https://ledger.groovehq.com/knowledge_base/topics/how-to-secure-your-eth-tokens-augur-rep-dot-dot-dot-with-your-nano-s" target="_blank" rel="noopener"></a>How to secure your tokens with your Nano S<br><br><a tabindex="0" role="button" href="https://www.ledgerwallet.com/r/fa4b?path=/products/" target="_blank" rel="noopener" class="btn btn-default btn-xs"></a>Don't have a Ledger? Buy one today.</p>
+          </div>
+        </div>
+        <div id="selectedTypeTrezor" class="ng-scope hidden">
+          <div class="form-group"><a id="aria7" tabindex="0" role="button" class="btn btn-primary btn-block ng-scope">Connect to TREZOR</a></div>
+          <p role="alert" ng-show="trezorError" class="text-center text-danger ng-hide"><strong class="ng-binding"></strong></p><br><br>
+          <div class="text-center">
+            <p>Guide:<br><a href="https://blog.trezor.io/trezor-integration-with-myetherwallet-3e217a652e08#.n5fddxmdg" target="_blank" rel="noopener">How to use TREZOR with MyEtherWallet</a><br><a tabindex="0" role="button" href="https://trezor.io/?a=myetherwallet.com" target="_blank" rel="noopener" class="btn btn-xs btn-default">Don't have a TREZOR? Order one now.</a></p>
+          </div>
+        </div>
+        <div id="selectedTypeDigitalBitbox" class="ng-scope hidden">
+          <div class="form-group"><a tabindex="0" role="button" class="btn btn-primary btn-block ng-scope">Connect your Digital Bitbox</a></div>
+          <input type="password" placeholder="Digital Bitbox password" value="" class="form-control ng-pristine ng-untouched ng-valid ng-empty">
+          <ol>
+            <li id="aria7" tabinex="0" class="text-danger ng-scope ng-hide">Re-open MyEtherWallet on a secure (SSL) connection</li>
+          </ol>
+          <div class="text-center"><br><br>
+            <p>Guides:<br><a href="https://digitalbitbox.com/ethereum" target="_blank"></a>How to use MyEtherWallet with your Digital Bitbox<br><a tabindex="0" role="button" href="https://digitalbitbox.com/?ref=mew" target="_blank" class="btn btn-xs btn-default btn-sm">Don't have a Digital Bitbox? Buy one today.</a></p>
+          </div>
+        </div>
+        <div id="selectedUploadKey" class="ng-scope hidden">
+          <h4 translate="ADD_Radio_2_alt" class="ng-scope">Select Your Wallet File</h4>
+          <div class="form-group">
+            <input id="fselector" style="display:none;" type="file"><a id="aria1" tabindex="0" role="button" class="btn-file marg-v-sm ng-scope">SELECT WALLET FILE...</a>
+          </div>
+          <div class="form-group ng-scope">
+            <p class="ng-scope">Your wallet is encrypted. Good! Please enter the password.</p>
+            <input placeholder="Password" type="password" class="form-control ng-pristine ng-valid ng-empty is-invalid ng-touched">
+          </div>
+        </div>
+        <div id="selectedTypeMnemonic" class="ng-scope hidden">
+          <h4 class="ng-scope">Paste/Type Your Mnemonic</h4>
+          <div class="form-group">
+            <textarea id="aria4" placeholder="Mnemonic Phrase" rows="4" class="form-control ng-pristine ng-untouched ng-valid ng-empty is-invalid"></textarea>
+          </div>
+          <div class="form-group">
+            <p class="ng-scope">Password (optional):</p>
+            <div>
+              <input id="aria5" placeholder="Password" type="password" class="form-control ng-pristine ng-untouched ng-valid ng-empty">
+            </div>
+          </div>
+        </div>
+        <div id="selectedTypeKey" class="ng-scope hidden">
+          <h4 class="ng-scope">Paste/Type Your Private Key</h4>
+          <div class="form-group">
+            <textarea id="aria6" placeholder="Private Key" rows="4" class="form-control ng-valid is-invalid ng-dirty ng-valid-parse ng-empty ng-touched"></textarea>
+          </div>
+        </div>
+        <div id="selectedTypeKey" class="ng-scope hidden">
+          <h4 class="ng-scope">Your Address</h4>
+          <div class="form-group">
+            <textarea id="aria8" rows="4" placeholder="Your Address" class="form-control ng-pristine ng-valid ng-empty is-invalid ng-touched"></textarea>
+          </div>
+        </div>
+      </section>
+      <section class="col-md-4 col-sm-6 ng-hide">
+        <h4 id="uploadbtntxt-wallet" class="ng-scope">Unlock your Wallet</h4>
+        <div class="form-group"><a tabindex="0" role="button" class="btn btn-primary btn-block ng-scope">Unlock</a></div>
+        <div class="form-group"><a role="button" tabindex="0" class="btn btn-primary btn-block ng-scope ng-hide">Unlock</a></div>
+        <div class="form-group"><a role="button" tabindex="0" class="btn btn-primary btn-block ng-scope ng-hide">Connect to Ledger Wallet</a></div>
+      </section>
+    </article>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js" type="text/javascript"></script>
+  <script src="js/main.js" type="text/javascript"></script>
+</html>
