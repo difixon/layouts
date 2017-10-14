@@ -1,2 +1,198 @@
-var Countdown={$el:$(".countdown"),countdown_interval:null,total_seconds:0,init:function(){this.$={days:this.$el.find(".bloc-time.days .figure"),hours:this.$el.find(".bloc-time.hours .figure"),minutes:this.$el.find(".bloc-time.min .figure"),seconds:this.$el.find(".bloc-time.sec .figure")},this.values={days:this.$.days.parent().attr("data-init-value"),hours:this.$.hours.parent().attr("data-init-value"),minutes:this.$.minutes.parent().attr("data-init-value"),seconds:this.$.seconds.parent().attr("data-init-value")},this.total_seconds=60*this.values.days*60*24+60*this.values.hours*60+60*this.values.minutes+this.values.seconds,this.count()},count:function(){var t=this,e=this.$.days.eq(0),s=this.$.days.eq(1),n=this.$.hours.eq(0),i=this.$.hours.eq(1),a=this.$.minutes.eq(0),o=this.$.minutes.eq(1),u=this.$.seconds.eq(0),r=this.$.seconds.eq(1);this.countdown_interval=setInterval(function(){t.total_seconds>0?(--t.values.seconds,t.values.minutes>=0&&t.values.seconds<0&&(t.values.seconds=59,--t.values.minutes),t.values.hours>=0&&t.values.minutes<0&&(t.values.minutes=59,--t.values.hours),t.values.days>=0&&t.values.hours<0&&(t.values.hours=23,--t.values.days),t.checkHour(t.values.days,e,s),t.checkHour(t.values.hours,n,i),t.checkHour(t.values.minutes,a,o),t.checkHour(t.values.seconds,u,r),--t.total_seconds):clearInterval(t.countdown_interval)},1e3)},animateFigure:function(t,e){var s=t.find(".top"),n=t.find(".bottom"),i=t.find(".top-back"),a=t.find(".bottom-back");i.find("span").html(e),a.find("span").html(e),TweenMax.to(s,.8,{rotationX:"-180deg",transformPerspective:300,translateX:"5px",ease:Quart.easeOut,onComplete:function(){s.html(e),n.html(e),TweenMax.set(s,{rotationX:0})}}),TweenMax.to(i,.8,{rotationX:0,transformPerspective:300,ease:Quart.easeOut,clearProps:"all"})},checkHour:function(t,e,s){var n=t.toString().charAt(0),i=t.toString().charAt(1),a=e.find(".top").html(),o=s.find(".top").html();t>=10?(a!==n&&this.animateFigure(e,n),o!==i&&this.animateFigure(s,i)):("0"!==a&&this.animateFigure(e,0),o!==n&&this.animateFigure(s,n))}};Countdown.init(),$(document).ready(function(){new Swiper(".swiper-container",{nextButton:".swiper-button-next",prevButton:".swiper-button-prev",slidesPerView:"auto",centeredSlides:!0,paginationClickable:!0,loop:!0}),new Swiper(".swiper-container1",{pagination:".swiper-pagination",nextButton:".swiper-button-next1",prevButton:".swiper-button-prev1",slidesPerView:"auto",centeredSlides:!0,paginationClickable:!0,loop:!0})});
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1haW4uanMiXSwibmFtZXMiOlsiQ291bnRkb3duIiwiJGVsIiwiJCIsImNvdW50ZG93bl9pbnRlcnZhbCIsInRvdGFsX3NlY29uZHMiLCJpbml0IiwidGhpcyIsImRheXMiLCJmaW5kIiwiaG91cnMiLCJtaW51dGVzIiwic2Vjb25kcyIsInZhbHVlcyIsInBhcmVudCIsImF0dHIiLCJjb3VudCIsInRoYXQiLCIkZGF5c18xIiwiZXEiLCIkZGF5c18yIiwiJGhvdXJfMSIsIiRob3VyXzIiLCIkbWluXzEiLCIkbWluXzIiLCIkc2VjXzEiLCIkc2VjXzIiLCJzZXRJbnRlcnZhbCIsImNoZWNrSG91ciIsImNsZWFySW50ZXJ2YWwiLCJhbmltYXRlRmlndXJlIiwidmFsdWUiLCIkdG9wIiwiJGJvdHRvbSIsIiRiYWNrX3RvcCIsIiRiYWNrX2JvdHRvbSIsImh0bWwiLCJUd2Vlbk1heCIsInRvIiwicm90YXRpb25YIiwidHJhbnNmb3JtUGVyc3BlY3RpdmUiLCJ0cmFuc2xhdGVYIiwiZWFzZSIsIlF1YXJ0IiwiZWFzZU91dCIsIm9uQ29tcGxldGUiLCJzZXQiLCJjbGVhclByb3BzIiwiJGVsXzEiLCIkZWxfMiIsInZhbF8xIiwidG9TdHJpbmciLCJjaGFyQXQiLCJ2YWxfMiIsImZpZ18xX3ZhbHVlIiwiZmlnXzJfdmFsdWUiLCJkb2N1bWVudCIsInJlYWR5IiwiU3dpcGVyIiwibmV4dEJ1dHRvbiIsInByZXZCdXR0b24iLCJzbGlkZXNQZXJWaWV3IiwiY2VudGVyZWRTbGlkZXMiLCJwYWdpbmF0aW9uQ2xpY2thYmxlIiwibG9vcCIsInBhZ2luYXRpb24iXSwibWFwcGluZ3MiOiJBQUNBLElBQUlBLFdBR0ZDLElBQUtDLEVBQUUsY0FHUEMsbUJBQW9CLEtBQ3BCQyxjQUFvQixFQUdwQkMsS0FBTSxXQUdOQyxLQUFLSixHQUNESyxLQUFTRCxLQUFLTCxJQUFJTyxLQUFLLDJCQUN4QkMsTUFBU0gsS0FBS0wsSUFBSU8sS0FBSyw0QkFDdkJFLFFBQVNKLEtBQUtMLElB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LE9BQ2pDbUIsRUFBY04sRUFBTXhDLEtBQUssUUFBUTJCLE9BRWxDTCxHQUFTLElBR0x1QixJQUFnQkosR0FBTzNDLEtBQUt1QixjQUFja0IsRUFBT0UsR0FDakRLLElBQWdCRixHQUFPOUMsS0FBS3VCLGNBQWNtQixFQUFPSSxLQUtqQyxNQUFoQkMsR0FBcUIvQyxLQUFLdUIsY0FBY2tCLEVBQU8sR0FDL0NPLElBQWdCTCxHQUFPM0MsS0FBS3VCLGNBQWNtQixFQUFPQyxNQU01RGpELFVBQVVLLE9BQ1ZILEVBQUVxRCxVQUFVQyxNQUFNLFdBRUEsSUFBSUMsT0FBUSxxQkFFekJDLFdBQVksc0JBQ1pDLFdBQVksc0JBQ1pDLGNBQWUsT0FDZkMsZ0JBQWdCLEVBQ2hCQyxxQkFBcUIsRUFDckJDLE1BQU0sSUFFUSxJQUFJTixPQUFRLHNCQUUxQk8sV0FBWSxxQkFDWk4sV0FBWSx1QkFDWkMsV0FBWSx1QkFDWkMsY0FBZSxPQUNmQyxnQkFBZ0IsRUFDaEJDLHFCQUFxQixFQUNyQkMsTUFBTSIsImZpbGUiOiJtYWluLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLy8gQ3JlYXRlIENvdW50ZG93blxudmFyIENvdW50ZG93biA9IHtcblxuICAvLyBCYWNrYm9uZS1saWtlIHN0cnVjdHVyZVxuICAkZWw6ICQoJy5jb3VudGRvd24nKSxcblxuICAvLyBQYXJhbXNcbiAgY291bnRkb3duX2ludGVydmFsOiBudWxsLFxuICB0b3RhbF9zZWNvbmRzICAgICA6IDAsXG5cbiAgLy8gSW5pdGlhbGl6ZSB0aGUgY291bnRkb3duXG4gIGluaXQ6IGZ1bmN0aW9uKCkge1xuXG4gICAgLy8gRE9NXG5cdFx0dGhpcy4kID0ge1xuICAgICAgZGF5cyAgIDogdGhpcy4kZWwuZmluZCgnLmJsb2MtdGltZS5kYXlzIC5maWd1cmUnKSxcbiAgICBcdGhvdXJzICA6IHRoaXMuJGVsLmZpbmQoJy5ibG9jLXRpbWUuaG91cnMgLmZpZ3VyZScpLFxuICAgIFx0bWludXRlczogdGhpcy4kZWwuZmluZCgnLmJsb2MtdGltZS5taW4gLmZpZ3VyZScpLFxuICAgIFx0c2Vjb25kczogdGhpcy4kZWwuZmluZCgnLmJsb2MtdGltZS5zZWMgLmZpZ3VyZScpXG4gICBcdH07XG5cbiAgICAvLyBJbml0IGNvdW50ZG93biB2YWx1ZXNcbiAgICB0aGlzLnZhbHVlcyA9IHtcbiAgICAgICAgZGF5cyAgOiB0aGlzLiQuZGF5cy5wYXJlbnQoKS5hdHRyKCdkYXRhLWluaXQtdmFsdWUnKSxcbiAgICAgICAgaG91cnMgIDogdGhpcy4kLmhvdXJzLnBhcmVudCgpLmF0dHIoJ2RhdGEtaW5pdC12YWx1ZScpLFxuICAgICAgICBtaW51dGVzOiB0aGlzLiQubWludXRlcy5wYXJlbnQoKS5hdHRyKCdkYXRhLWluaXQtdmFsdWUnKSxcbiAgICAgICAgc2Vjb25kczogdGhpcy4kLnNlY29uZHMucGFyZW50KCkuYXR0cignZGF0YS1pbml0LXZhbHVlJyksXG4gICAgfTtcblxuICAgIC8vIEluaXRpYWxpemUgdG90YWwgc2Vjb25kc1xuICAgIHRoaXMudG90YWxfc2Vjb25kcyA9IHRoaXMudmFsdWVzLmRheXMgKiA2MCAqIDYwICogMjQgKyB0aGlzLnZhbHVlcy5ob3VycyAqIDYwICogNjAgKyAodGhpcy52YWx1ZXMubWludXRlcyAqIDYwKSArIHRoaXMudmFsdWVzLnNlY29uZHM7XG5cbiAgICAvLyBBbmltYXRlIGNvdW50ZG93biB0byB0aGUgZW5kXG4gICAgdGhpcy5jb3VudCgpO1xuICB9LFxuXG4gIGNvdW50OiBmdW5jdGlvbigpIHtcblxuICAgIHZhciB0aGF0ICAgID0gdGhpcyxcbiAgICAgICAgJGRheXNfMSA9IHRoaXMuJC5kYXlzLmVxKDApLFxuICAgICAgICAkZGF5c18yID0gdGhpcy4kLmRheXMuZXEoMSksXG4gICAgICAgICRob3VyXzEgPSB0aGlzLiQuaG91cnMuZXEoMCksXG4gICAgICAgICRob3VyXzIgPSB0aGlzLiQuaG91cnMuZXEoMSksXG4gICAgICAgICRtaW5fMSAgPSB0aGlzLiQubWludXRlcy5lcSgwKSxcbiAgICAgICAgJG1pbl8yICA9IHRoaXMuJC5taW51dGVzLmVxKDEpLFxuICAgICAgICAkc2VjXzEgID0gdGhpcy4kLnNlY29uZHMuZXEoMCksXG4gICAgICAgICRzZWNfMiAgPSB0aGlzLiQuc2Vjb25kcy5lcSgxKTtcblxuICAgICAgICB0aGlzLmNvdW50ZG93bl9pbnRlcnZhbCA9IHNldEludGVydmFsKGZ1bmN0aW9uKCkge1xuXG4gICAgICAgIGlmKHRoYXQudG90YWxfc2Vjb25kcyA+IDApIHtcblxuICAgICAgICAgICAgLS10aGF0LnZhbHVlcy5zZWNvbmRzO1xuXG4gICAgICAgICAgICBpZih0aGF0LnZhbHVlcy5taW51dGVzID49IDAgJiYgdGhhdC52YWx1ZXMuc2Vjb25kcyA8IDApIHtcblxuICAgICAgICAgICAgICAgIHRoYXQudmFsdWVzLnNlY29uZHMgPSA1OTtcbiAgICAgICAgICAgICAgICAtLXRoYXQudmFsdWVzLm1pbnV0ZXM7XG4gICAgICAgICAgICB9XG5cbiAgICAgICAgICAgIGlmKHRoYXQudmFsdWVzLmhvdXJzID49IDAgJiYgdGhhdC52YWx1ZXMubWludXRlcyA8IDApIHtcblxuICAgICAgICAgICAgICAgIHRoYXQudmFsdWVzLm1pbnV0ZXMgPSA1OTtcbiAgICAgICAgICAgICAgICAtLXRoYXQudmFsdWVzLmhvdXJzO1xuICAgICAgICAgICAgfVxuXG4gICAgICAgICAgICBpZih0aGF0LnZhbHVlcy5kYXlzID49IDAgJiYgdGhhdC52YWx1ZXMuaG91cnMgPCAwKSB7XG5cbiAgICAgICAgICAgICAgICB0aGF0LnZhbHVlcy5ob3VycyA9IDIzO1xuICAgICAgICAgICAgICAgIC0tdGhhdC52YWx1ZXMuZGF5cztcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIC8vIFVwZGF0ZSBET00gdmFsdWVzXG4gICAgICAgICAgICAvLyBEYXlzXG4gICAgICAgICAgICB0aGF0LmNoZWNrSG91cih0aGF0LnZhbHVlcy5kYXlzLCAkZGF5c18xLCAkZGF5c18yKTtcblxuICAgICAgICAgICAgLy8gSG91cnNcbiAgICAgICAgICAgIHRoYXQuY2hlY2tIb3VyKHRoYXQudmFsdWVzLmhvdXJzLCAkaG91cl8xLCAkaG91cl8yKTtcblxuICAgICAgICAgICAgLy8gTWludXRlc1xuICAgICAgICAgICAgdGhhdC5jaGVja0hvdXIodGhhdC52YWx1ZXMubWludXRlcywgJG1pbl8xLCAkbWluXzIpO1xuXG4gICAgICAgICAgICAvLyBTZWNvbmRzXG4gICAgICAgICAgICB0aGF0LmNoZWNrSG91cih0aGF0LnZhbHVlcy5zZWNvbmRzLCAkc2VjXzEsICRzZWNfMik7XG5cbiAgICAgICAgICAgIC0tdGhhdC50b3RhbF9zZWNvbmRzO1xuICAgICAgICB9XG4gICAgICAgIGVsc2Uge1xuICAgICAgICAgICAgY2xlYXJJbnRlcnZhbCh0aGF0LmNvdW50ZG93bl9pbnRlcnZhbCk7XG4gICAgICAgIH1cbiAgICB9LCAxMDAwKTtcbiAgfSxcblxuICBhbmltYXRlRmlndXJlOiBmdW5jdGlvbigkZWwsIHZhbHVlKSB7XG5cbiAgICAgdmFyIHRoYXQgICAgICAgICA9IHRoaXMsXG5cdFx0ICAgICAkdG9wICAgICAgICAgPSAkZWwuZmluZCgnLnRvcCcpLFxuICAgICAgICAgJGJvdHRvbSAgICAgID0gJGVsLmZpbmQoJy5ib3R0b20nKSxcbiAgICAgICAgICRiYWNrX3RvcCAgICA9ICRlbC5maW5kKCcudG9wLWJhY2snKSxcbiAgICAgICAgICRiYWNrX2JvdHRvbSA9ICRlbC5maW5kKCcuYm90dG9tLWJhY2snKTtcblxuICAgIC8vIEJlZm9yZSB3ZSBiZWdpbiwgY2hhbmdlIHRoZSBiYWNrIHZhbHVlXG4gICAgJGJhY2tfdG9wLmZpbmQoJ3NwYW4nKS5odG1sKHZhbHVlKTtcblxuICAgIC8vIEFsc28gY2hhbmdlIHRoZSBiYWNrIGJvdHRvbSB2YWx1ZVxuICAgICRiYWNrX2JvdHRvbS5maW5kKCdzcGFuJykuaHRtbCh2YWx1ZSk7XG5cbiAgICAvLyBUaGVuIGFuaW1hdGVcbiAgICBUd2Vlbk1heC50bygkdG9wLCAwLjgsIHtcbiAgICAgICAgcm90YXRpb25YICAgICAgICAgICA6ICctMTgwZGVnJyxcbiAgICAgICAgdHJhbnNmb3JtUGVyc3BlY3RpdmU6IDMwMCxcbiAgICAgICAgdHJhbnNsYXRlWCAgICAgICAgICA6ICc1cHgnLFxuXHQgICAgICBlYXNlICAgICAgICAgICAgICAgIDogUXVhcnQuZWFzZU91dCxcbiAgICAgICAgb25Db21wbGV0ZSAgICAgICAgICA6IGZ1bmN0aW9uKCkge1xuXG4gICAgICAgICAgICAkdG9wLmh0bWwodmFsdWUpO1xuXG4gICAgICAgICAgICAkYm90dG9tLmh0bWwodmFsdWUpO1xuXG4gICAgICAgICAgICBUd2Vlbk1heC5zZXQoJHRvcCwgeyByb3RhdGlvblg6IDAgfSk7XG4gICAgICAgIH1cbiAgICB9KTtcblxuICAgIFR3ZWVuTWF4LnRvKCRiYWNrX3RvcCwgMC44LCB7XG4gICAgICAgIHJvdGF0aW9uWCAgICAgICAgICAgOiAwLFxuICAgICAgICB0cmFuc2Zvcm1QZXJzcGVjdGl2ZTogMzAwLFxuXHQgICAgICBlYXNlICAgICAgICAgICAgICAgIDogUXVhcnQuZWFzZU91dCxcbiAgICAgICAgY2xlYXJQcm9wcyAgICAgICAgICA6ICdhbGwnXG4gICAgfSk7XG4gIH0sXG5cbiAgY2hlY2tIb3VyOiBmdW5jdGlvbih2YWx1ZSwgJGVsXzEsICRlbF8yKSB7XG5cbiAgICB2YXIgdmFsXzEgICAgICAgPSB2YWx1ZS50b1N0cmluZygpLmNoYXJBdCgwKSxcbiAgICAgICAgdmFsXzIgICAgICAgPSB2YWx1ZS50b1N0cmluZygpLmNoYXJBdCgxKSxcbiAgICAgICAgZmlnXzFfdmFsdWUgPSAkZWxfMS5maW5kKCcudG9wJykuaHRtbCgpLFxuICAgICAgICBmaWdfMl92YWx1ZSA9ICRlbF8yLmZpbmQoJy50b3AnKS5odG1sKCk7XG5cbiAgICBpZih2YWx1ZSA+PSAxMCkge1xuXG4gICAgICAgIC8vIEFuaW1hdGUgb25seSBpZiB0aGUgZmlndXJlIGhhcyBjaGFuZ2VkXG4gICAgICAgIGlmKGZpZ18xX3ZhbHVlICE9PSB2YWxfMSkgdGhpcy5hbmltYXRlRmlndXJlKCRlbF8xLCB2YWxfMSk7XG4gICAgICAgIGlmKGZpZ18yX3ZhbHVlICE9PSB2YWxfMikgdGhpcy5hbmltYXRlRmlndXJlKCRlbF8yLCB2YWxfMik7XG4gICAgfVxuICAgIGVsc2Uge1xuXG4gICAgICAgIC8vIElmIHdlIGFyZSB1bmRlciAxMCwgcmVwbGFjZSBmaXJzdCBmaWd1cmUgd2l0aCAwXG4gICAgICAgIGlmKGZpZ18xX3ZhbHVlICE9PSAnMCcpIHRoaXMuYW5pbWF0ZUZpZ3VyZSgkZWxfMSwgMCk7XG4gICAgICAgIGlmKGZpZ18yX3ZhbHVlICE9PSB2YWxfMSkgdGhpcy5hbmltYXRlRmlndXJlKCRlbF8yLCB2YWxfMSk7XG4gICAgfVxuICB9XG59O1xuXG4vLyBMZXQncyBnbyAhXG5Db3VudGRvd24uaW5pdCgpO1xuJChkb2N1bWVudCkucmVhZHkoZnVuY3Rpb24gKCkge1xuICAgLy9pbml0aWFsaXplIHN3aXBlciB3aGVuIGRvY3VtZW50IHJlYWR5XG4gICB2YXIgbXlTd2lwZXIgPSBuZXcgU3dpcGVyICgnLnN3aXBlci1jb250YWluZXInLCB7XG4gICAgIC8vIE9wdGlvbmFsIHBhcmFtZXRlcnNcbiAgICAgbmV4dEJ1dHRvbjogJy5zd2lwZXItYnV0dG9uLW5leHQnLFxuICAgICBwcmV2QnV0dG9uOiAnLnN3aXBlci1idXR0b24tcHJldicsXG4gICAgIHNsaWRlc1BlclZpZXc6ICdhdXRvJyxcbiAgICAgY2VudGVyZWRTbGlkZXM6IHRydWUsXG4gICAgIHBhZ2luYXRpb25DbGlja2FibGU6IHRydWUsXG4gICAgIGxvb3A6IHRydWVcbiAgIH0pXG4gICB2YXIgbXlTd2lwZXIxID0gbmV3IFN3aXBlciAoJy5zd2lwZXItY29udGFpbmVyMScsIHtcbiAgICAgLy8gT3B0aW9uYWwgcGFyYW1ldGVyc1xuICAgICBwYWdpbmF0aW9uOiAnLnN3aXBlci1wYWdpbmF0aW9uJyxcbiAgICAgbmV4dEJ1dHRvbjogJy5zd2lwZXItYnV0dG9uLW5leHQxJyxcbiAgICAgcHJldkJ1dHRvbjogJy5zd2lwZXItYnV0dG9uLXByZXYxJyxcbiAgICAgc2xpZGVzUGVyVmlldzogJ2F1dG8nLFxuICAgICBjZW50ZXJlZFNsaWRlczogdHJ1ZSxcbiAgICAgcGFnaW5hdGlvbkNsaWNrYWJsZTogdHJ1ZSxcbiAgICAgbG9vcDogdHJ1ZVxuICAgfSlcbiB9KTsiXSwic291cmNlUm9vdCI6Ii9zb3VyY2UvIn0=
+// Create Countdown
+// Generated by CoffeeScript 1.4.0
+
+/*
+countdown is a simple jquery plugin for countdowns
+
+Dual licensed under the MIT (http://www.opensource.org/licenses/mit-license.php)
+and GPL-3.0 (http://opensource.org/licenses/GPL-3.0) licenses.
+
+@source: http://github.com/rendro/countdown/
+@autor: Robert Fleischmann
+@version: 1.0.1
+*/
+
+
+(function() {
+
+  (function($) {
+    $.countdown = function(el, options) {
+      var getDateData,
+        _this = this;
+      this.el = el;
+      this.$el = $(el);
+      this.$el.data("countdown", this);
+      this.init = function() {
+        _this.options = $.extend({}, $.countdown.defaultOptions, options);
+        if (_this.options.refresh) {
+          _this.interval = setInterval(function() {
+            return _this.render();
+          }, _this.options.refresh);
+        }
+        _this.render();
+        return _this;
+      };
+      getDateData = function(endDate) {
+        var dateData, diff;
+        endDate = Date.parse($.isPlainObject(_this.options.date) ? _this.options.date : new Date(_this.options.date));
+        diff = (endDate - Date.parse(new Date)) / 1000;
+        if (diff <= 0) {
+          diff = 0;
+          if (_this.interval) {
+            _this.stop();
+          }
+          _this.options.onEnd.apply(_this);
+        }
+        dateData = {
+          years: 0,
+          days: 0,
+          hours: 0,
+          min: 0,
+          sec: 0,
+          millisec: 0
+        };
+        if (diff >= (365.25 * 86400)) {
+          dateData.years = Math.floor(diff / (365.25 * 86400));
+          diff -= dateData.years * 365.25 * 86400;
+        }
+        if (diff >= 86400) {
+          dateData.days = Math.floor(diff / 86400);
+          diff -= dateData.days * 86400;
+        }
+        if (diff >= 3600) {
+          dateData.hours = Math.floor(diff / 3600);
+          diff -= dateData.hours * 3600;
+        }
+        if (diff >= 60) {
+          dateData.min = Math.floor(diff / 60);
+          diff -= dateData.min * 60;
+        }
+        dateData.sec = diff;
+        return dateData;
+      };
+      this.leadingZeros = function(num, length) {
+        if (length == null) {
+          length = 2;
+        }
+        num = String(num);
+        while (num.length < length) {
+          num = "0" + num;
+        }
+        return num;
+      };
+      this.update = function(newDate) {
+        _this.options.date = newDate;
+        return _this;
+      };
+      this.render = function() {
+        _this.options.render.apply(_this, [getDateData(_this.options.date)]);
+        return _this;
+      };
+      this.stop = function() {
+        if (_this.interval) {
+          clearInterval(_this.interval);
+        }
+        _this.interval = null;
+        return _this;
+      };
+      this.start = function(refresh) {
+        if (refresh == null) {
+          refresh = _this.options.refresh || $.countdown.defaultOptions.refresh;
+        }
+        if (_this.interval) {
+          clearInterval(_this.interval);
+        }
+        _this.render();
+        _this.options.refresh = refresh;
+        _this.interval = setInterval(function() {
+          return _this.render();
+        }, _this.options.refresh);
+        return _this;
+      };
+      return this.init();
+    };
+    $.countdown.defaultOptions = {
+      date: "June 7, 2087 15:03:25",
+      refresh: 1000,
+      onEnd: $.noop,
+      render: function(date) {
+        return $(this.el).html("" + date.years + " years, " + date.days + " days, " + (this.leadingZeros(date.hours)) + " hours, " + (this.leadingZeros(date.min)) + " min and " + (this.leadingZeros(date.sec)) + " sec");
+      }
+    };
+    $.fn.countdown = function(options) {
+      return $.each(this, function(i, el) {
+        var $el;
+        $el = $(el);
+        if (!$el.data('countdown')) {
+          return $el.data('countdown', new $.countdown(el, options));
+        }
+      });
+    };
+    return void 0;
+  })(jQuery);
+
+}).call(this);
+
+$( function() {
+        //var endDate = "January 01, 2018 00:00:00";
+		var current = new Date();
+        var endDate = new Date(current.getTime() + 786400000);
+		endDate.toLocaleDateString();
+
+
+        $('.countdown.simple').countdown({ date: endDate });
+		
+        $('.countdown').countdown({
+			
+			
+          date: endDate,
+          render: function(data) {
+			  var $days_2 = parseInt(this.leadingZeros(data.days, 2)%10),
+			$days_1= parseInt(this.leadingZeros(data.days, 2)/10),
+			$hours_2= parseInt(this.leadingZeros(data.hours, 2)%10),
+			$hours_1= parseInt(this.leadingZeros(data.hours, 2)/10),
+			$min_2= parseInt(this.leadingZeros(data.min, 2)%10),
+			$min_1= parseInt(this.leadingZeros(data.min, 2)/10),
+			$sec_2= parseInt(this.leadingZeros(data.sec, 2)%10),
+			$sec_1= parseInt(this.leadingZeros(data.sec, 2)/10);
+            $(this.el).html("<div class='bloc-time days'><div class='figure days days-1'><span class='top'>" + $days_1 + "</span><span class='top-back'><span>"+ $days_1 +" </span></span><span class='bottom'>" + $days_1 +" </span><span class='bottom-back'><span>"+ $days_1 + "</span></span></div><div class='figure days days-2'><span class='top'>" + $days_2 +" </span><span class='top-back'><span>"+ $days_2 +" </span></span><span class='bottom'>" + $days_2 +" </span><span class='bottom-back'><span>"+ $days_2 + "</span></span></div><span class='count-title'>Days</span></div><div class='bloc-time hours'><div class='figure hours hours-1'><span class='top'>" + $hours_1 +" </span><span class='top-back'><span>"+ $hours_1 +" </span></span><span class='bottom'>" + $hours_1 +" </span><span class='bottom-back'><span>"+ $hours_1 + "</span></span></div><div class='figure hours hours-2'><span class='top'>" + $hours_2 +" </span><span class='top-back'><span>"+ $hours_2 +" </span></span><span class='bottom'>" + $hours_2 +" </span><span class='bottom-back'><span>"+ $hours_2 + "</span></span></div><span class='count-title'>Hours</span></div><div class='bloc-time min'><div class='figure min min-1'><span class='top'>" + $min_1 +" </span><span class='top-back'><span>"+ $min_1 +" </span></span><span class='bottom'>" + $min_1 +" </span><span class='bottom-back'><span>"+ $min_1 + "</span></span></div><div class='figure min min-2'><span class='top'>" + $min_2 +" </span><span class='top-back'><span>"+ $min_2 +" </span></span><span class='bottom'>" + $min_2 +" </span><span class='bottom-back'><span>"+ $min_2 + "</span></span></div><span class='count-title'>Minutes</span></div><div class='bloc-time sec'><div class='figure sec sec-1'><span class='top'>" + $sec_1 +" </span><span class='top-back'><span>"+ $sec_1 +" </span></span><span class='bottom'>" + $sec_1 +" </span><span class='bottom-back'><span>"+ $sec_1 + "</span></span></div><div class='figure sec sec-2'><span class='top'>" + $sec_2 +" </span><span class='top-back'><span>"+ $sec_2 +" </span></span><span class='bottom'>" + $sec_2 +" </span><span class='bottom-back'><span>"+ $sec_2 + "</span></span></div><span class='count-title'>Seconds</span></div>");
+          }
+        });
+
+        $('.countdown.callback').countdown({
+          date: +(new Date) + 10000,
+          render: function(data) {
+            $(this.el).text(this.leadingZeros(data.sec, 2) + " sec");
+          },
+          onEnd: function() {
+            $(this.el).addClass('ended');
+          }
+        }).on("click", function() {
+          $(this).removeClass('ended').data('countdown').update(+(new Date) + 10000).start();
+        });
+		
+		
+		
+      });
+$(document).ready(function () {
+   //initialize swiper when document ready
+   var mySwiper = new Swiper ('.swiper-container', {
+     // Optional parameters
+     nextButton: '.swiper-button-next',
+     prevButton: '.swiper-button-prev',
+     slidesPerView: 'auto',
+     centeredSlides: true,
+     paginationClickable: true,
+     loop: true
+   })
+   var mySwiper1 = new Swiper ('.swiper-container1', {
+     // Optional parameters
+     pagination: '.swiper-pagination',
+     nextButton: '.swiper-button-next1',
+     prevButton: '.swiper-button-prev1',
+     slidesPerView: 'auto',
+     centeredSlides: true,
+     paginationClickable: true,
+     loop: true
+   })
+ });
