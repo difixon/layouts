@@ -78,8 +78,15 @@ header .nav li:last-child a { border: none; }
 .section3 .to_internet_marketolog { height: 180px; background: url(img/to_internet_marketolog.png) no-repeat 50% 100%; }
 .section3 .to_freelancer { height: 180px; background: url(img/to_freelancer.png) no-repeat 50% 100%; }
 
-.section4 { background: url(img/author.jpg) no-repeat 50% 50%; height: 820px; }
+.section4 { background: url(img/author.jpg) no-repeat 50% 100% #fff; height: 930px; margin-bottom: 30px; }
+.section4 .right_block { padding-left: 705px; padding-top: 310px; }
+.section4 .right_block .pre_title { color: #313737; font-size: 36px; line-height: 72px; }
+.section4 .right_block .title { color: #313737; font-size: 60px; font-weight: 700; line-height: 36px; display: inline-block; padding-bottom: 36px; border-bottom: 4px solid #2596d4; }
+.section4 .right_block .cont { color: #313737; font-size: 20px; font-weight: 700; }
+.section4 .right_block .cont li { background: url(img/bullet1.png) 15px 11px no-repeat; padding-left: 35px; line-height: 24px; margin-bottom: 10px; }
+.section4 .right_block .cont p + ul { margin-top: -10px; }
 
+.section5 h2 { margin-bottom: 40px; }
 .section5 .block { -webkit-box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.02); box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.02); background-color: #ffffff; padding: 36px 32px 20px; margin-bottom: 10px; }
 .section5 .block:after { content: ""; display: block; clear: both; }
 .section5 .block .count { height: 38px; width: 38px; line-height: 38px; background: #c4f4f0; text-align: center; color: #2596d4; font-size: 24px; font-weight: 700; border-radius: 38px; float: left; margin-right: 18px; }
