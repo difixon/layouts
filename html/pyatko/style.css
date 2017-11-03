@@ -96,6 +96,10 @@ header .nav li:last-child a { border: none; }
 .section5 .block .cont ul li:before { content: "▪"; color: #c0c0c0; line-height: 20px; margin-bottom: 10px; display: inline-block; width: 17px; }
 .section5 .block .thumb { width: 290px; text-align: right; float: left; }
 
+.section6 h2 { line-height: 53px; }
+.section6 h2 span { color: #313737; font-size: 36px; display: block; }
+.section6 .videoblock { text-align: center; background: url(img/videoshadow.png) no-repeat 50% 100%; padding-bottom: 20px; }
+
 .section8 { background: #fff; }
 .section8 h2 { background: url(img/gift.png) 50% 0 no-repeat; padding-top: 133px; }
 .section8 h2 span { font-size: 36px; display: block; }
