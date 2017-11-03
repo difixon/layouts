@@ -96,9 +96,17 @@ header .nav li:last-child a { border: none; }
 .section5 .block .cont ul li:before { content: "▪"; color: #c0c0c0; line-height: 20px; margin-bottom: 10px; display: inline-block; width: 17px; }
 .section5 .block .thumb { width: 290px; text-align: right; float: left; }
 
+.section6 { padding-bottom: 95px; }
 .section6 h2 { line-height: 53px; }
 .section6 h2 span { color: #313737; font-size: 36px; display: block; }
 .section6 .videoblock { text-align: center; background: url(img/videoshadow.png) no-repeat 50% 100%; padding-bottom: 20px; }
+
+.section7 { background: #fff; }
+.section7 .product_1 .top { background: url(img/product_1.jpg) 50% 0 no-repeat; height: 567px; position: relative; }
+.section7 .product_2 .top { background: url(img/product_2.jpg) 50% 0 no-repeat; height: 509px; position: relative; }
+.section7 .product_3 .top { background: url(img/product_3.jpg) 50% 0 no-repeat; height: 565px; position: relative; }
+.section7 .cost { position: absolute; border-radius: 5px; background-color: #2596d2; bottom: -22px; height: 44px; line-height: 44px; left: 105px; padding: 0 16px; color: #ffffff; font-family: "Arial Narrow"; font-size: 20px; }
+.section7 .cost span { font-weight: 700; }
 
 .section8 { background: #fff; }
 .section8 h2 { background: url(img/gift.png) 50% 0 no-repeat; padding-top: 133px; }
