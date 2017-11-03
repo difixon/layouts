@@ -1,17 +1,17 @@
-jQuery(document).ready(function() {
-    var offset = 220;
+$(document).ready(function() {
+    var offset = 500;
     var duration = 500;
-    jQuery(window).scroll(function() {
-        if (jQuery(this).scrollTop() > offset) {
-            jQuery('.back-to-top').fadeIn(duration);
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > offset) {
+            $('.back-to-top').fadeIn(duration);
         } else {
-            jQuery('.back-to-top').fadeOut(duration);
+            $('.back-to-top').fadeOut(duration);
         }
     });
 
-    jQuery('.back-to-top').click(function(event) {
+    $('.back-to-top').click(function(event) {
         event.preventDefault();
-        jQuery('html, body').animate({scrollTop: 0}, duration);
+        $('html, body').animate({scrollTop: 0}, duration);
         return false;
     })
     var mySwiper = new Swiper ('.swiper-container', {
@@ -24,11 +24,10 @@ jQuery(document).ready(function() {
      loop: true
    })
 });
-function myFunction() {
-    var x = document.getElementById("top_nav");
-    if (x.className === "collapse navbar-collapse") {
-        x.className += " responsive";
-    } else {
-        x.className = "collapse navbar-collapse";
-    }
-}
+$(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 500);
+});
