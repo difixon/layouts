@@ -148,7 +148,8 @@ header .nav li:last-child a { border: none; }
 .section6 h2 span { color: #313737; font-size: 36px; display: block; }
 .section6 .videoblock { text-align: center; }
 @media (min-width: 768px) { .section6 .videoblock { background: url(img/videoshadow.png) no-repeat 50% 100%; padding-bottom: 20px; } }
-.section6 .videoblock iframe { max-width: 100%; }
+.section6 .videoblock iframe { max-width: 100%; width:100%;height:200px;}
+@media (min-width: 768px) { .section6 .videoblock iframe { height:405px; width:702px} }
 
 .section7 { background: #fff; }
 .section7 .product_1 { padding-bottom: 60px; }
