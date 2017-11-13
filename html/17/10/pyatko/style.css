@@ -646,7 +646,7 @@ header {
           background-size: auto 400px; } }
       @media (min-width: 768px) {
         .section7 .product_2 .top {
-          background: url(img/product_2.jpg) 0 0 no-repeat; } }
+          background: url(img/product_2.jpg) 100% 0 no-repeat; } }
       @media (min-width: 1200px) {
         .section7 .product_2 .top {
           background-position: 50% 0; } }
