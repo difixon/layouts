@@ -6952,6 +6952,8 @@ html.fp-enabled {
 .fp-responsive .btn-bitcoin,.fp-responsive .btn-nds, .fp-responsive .btn-contact{display:none;}
 .fp-responsive #section0 .main-text{position:relative; text-align:center;top:unset; left:unset; -webkit-transform: translate(0, 0); transform: translate(0, 0);}
 @media(max-width:655px){
+	.fp-responsive .title{font-size:44px;}
+	.fp-responsive #video .item figcaption{font-size:24px;}
 	.fp-responsive #section0 .main-text .slogan{font-size:42px;}
 	.fp-responsive #video .item{width:95%; position:relative;margin:20px auto;}
 	.fp-responsive #video {padding-bottom:0;}
@@ -6959,5 +6961,12 @@ html.fp-enabled {
 	.fp-responsive #section0 .text-bottom.v-0{font-size:22px;}
 	.fp-responsive #section0 .main-text .logo img{max-width:78px;}
 	}
+@media(max-width:450px){
+	.fp-responsive .title{font-size:35px;}
+	.fp-responsive #section0 .main-text .slogan{font-size:27px;}
+	.fp-responsive #section0 .main-text .logo svg{height: 40px; max-width: 26px;}
+	.fp-responsive #section0 .text-bottom.v-0{font-size:18px;}
+	.fp-responsive #section0 .main-text .logo img{max-width:50px;}
+}
 @media(max-width:620px){.fp-responsive #contact-form .wrap form{padding:90px 40px;}}
 
