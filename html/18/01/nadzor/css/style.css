@@ -6950,6 +6950,8 @@ html.fp-enabled {
 .fp-responsive .header .header-in .tel {position: relative; top: unset;left: unset; -webkit-transform: translate(0, 0);transform: translate(0, 0);padding-top:20px;padding-bottom:20px; }
 .fp-responsive a.btn-menu{position: fixed;top: 62px;right: 20px;}
 .fp-responsive .btn-bitcoin,.fp-responsive .btn-nds, .fp-responsive .btn-contact{display:none;}
+.fp-responsive #menu{display:none!important;}
+
 .fp-responsive #section0 .main-text{position:relative; text-align:center;top:unset; left:unset; -webkit-transform: translate(0, 0); transform: translate(0, 0);}
 @media(max-width:655px){
 	.fp-responsive .title{font-size:44px;}
