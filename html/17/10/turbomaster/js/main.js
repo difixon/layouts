@@ -25,8 +25,8 @@ jQuery(document).ready(function() {
    })
    var mySwiper = new Swiper ('.feed-container', {
     // Optional parameters
-    nextButton: '.swiper-button-next',
-    prevButton: '.swiper-button-prev',
+    nextButton: '.swiper-button-next1',
+    prevButton: '.swiper-button-prev1',
     slidesPerView: 'auto',
     centeredSlides: true,
     paginationClickable: true,
@@ -34,8 +34,8 @@ jQuery(document).ready(function() {
   })
   var mySwiper = new Swiper ('.proms-container', {
    // Optional parameters
-   nextButton: '.swiper-button-next',
-   prevButton: '.swiper-button-prev',
+   nextButton: '.swiper-button-next2',
+   prevButton: '.swiper-button-prev2',
    slidesPerView: '2',
    centeredSlides: false,
    paginationClickable: true,
