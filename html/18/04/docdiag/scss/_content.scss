@@ -1,0 +1,432 @@
+
+// Базовые стили для оформления содержимого
+
+.content {
+	font-size: 14px;
+	line-height: 1.6;
+	text-align: justify;
+	overflow: hidden;
+	margin-bottom: 30px;
+
+	h1, h2, h3, h4, h5, h6 {
+		margin-bottom: ($content_margin - 8px);
+		font-weight: bold;
+		line-height: 1.2;
+		color: $color_main;
+	}
+
+	h1 {
+		font-family: 'PFDinTextCompProRegular', sans-serif;
+		font-size: 24px;
+
+		&.dotted {
+			padding-bottom: 6px;
+			border-bottom: 1px dotted #6a6a6a;
+		}
+
+	}
+
+	h2 {
+		font-size: 18px;
+	}
+
+	h3 {
+		font-size: 16px;
+	}
+
+	a {
+		text-decoration: none;
+		color: $color_blue;
+
+		&:hover {
+			color: $color_main;
+			text-decoration: underline;
+		}
+
+	}
+
+	p, table, ul, ol, img {
+		margin-bottom: $content_margin;
+	}
+
+	ul, ol {
+		list-style-position: outside;
+		overflow: hidden;
+
+		ul, ol {
+			margin: 7px 0 0;
+		}
+
+	}
+
+	li + li {
+		margin-top: 7px;
+	}
+
+	ol {
+		counter-reset: list;
+		letter-spacing: normal;
+		list-style-position: inside;
+		overflow: hidden;
+
+		li {
+			display: block;
+			padding-left: 30px;
+			position: relative;
+
+			&:after {
+				content: counter(list) ' ';
+				counter-increment: list;
+				display: block;
+				min-width: 20px;
+				height: 20px;
+				box-sizing: border-box;
+				position: absolute;
+				left: 0;
+				top: 0;
+				background-color: $color_blue;
+				border-radius: 3px;
+				font-size: 14px;
+				line-height: 20px;
+				color: #fff;
+				text-align: center;
+				font-family: 'PFDinCondensed-Regular', sans-serif;
+			}
+
+		}
+
+	}
+
+	ul {
+		list-style: none;
+
+		li {
+			display: block;
+			padding-left: 16px;
+			position: relative;
+
+			&:before {
+				content: ' ';
+				display: block;
+				width: 6px;
+				height: 6px;
+				border-radius: 50%;
+				background-color: $color_blue;
+				position: absolute;
+				top: 8px;
+				left: 0;
+			}
+
+		}
+
+	}
+
+	table {
+		height: auto;
+		width: 100%;
+		text-align: left;
+		border-top: 1px solid #c3c3c3;
+		border-right: 1px solid #c3c3c3;
+		line-height: 1.4;
+
+		caption {
+			font-weight: 600;
+			font-style: italic;
+			margin-bottom: $content_margin
+		}
+
+		tr {
+
+			&:nth-child(2n+1) {
+
+				td, th {
+					background-color: #e1e1e1;
+				}
+
+			}
+
+		}
+
+		th {
+			padding: 8px 20px 10px;
+			font-weight: 400;
+			color: #000000;
+			border-left: 1px solid #c3c3c3;
+			border-bottom: 1px solid #c3c3c3;
+		}
+
+		td {
+			padding: 8px 20px 10px;
+			border-left: 1px solid #c3c3c3;
+			border-bottom: 1px solid #c3c3c3;
+			color: #5d5d5d;
+		}
+
+	}
+
+	.table_wrapper {
+		margin-bottom: $content_margin;
+
+		table {
+			margin-bottom: 0;
+		}
+
+	}
+
+	img {
+		display: block;
+		max-width: 100%;
+		height: auto;
+
+		&.alignleft {
+			max-width: 60%;
+			margin: 5px 20px 10px 0;
+		}
+
+		&.alignright {
+			max-width: 60%;
+			margin: 5px 0 10px 20px;
+		}
+
+	}
+
+	.border {
+		border: 2px solid #e4e4e4;
+		padding: 2px;
+
+		&.alignleft {
+			max-width: 60%;
+			margin: 5px 20px 10px 0;
+		}
+
+		&.alignright {
+			max-width: 60%;
+			margin: 5px 0 10px 20px;
+		}
+
+		img {
+			margin-bottom: 0;
+		}
+
+	}
+
+	& > :last-child {
+		margin-bottom: 0;
+	}
+
+}
+
+
+// Стили для оформления дополнительных элементов WordPress
+
+.content {
+
+	.alignleft {
+		float: left;
+		margin: 0 $content_margin $content_margin 0;
+	}
+
+	.alignright {
+		float: right;
+		margin: 0 0 $content_margin $content_margin;
+	}
+
+	.alignnone {
+		margin: 0 0 $content_margin;
+	}
+
+	.aligncenter {
+		display: block;
+		margin: 0 auto $content_margin;
+	}
+
+}
+
+
+// Стиль для цитат
+
+.content {
+
+	blockquote {
+		display: block;
+		overflow: hidden;
+		padding: 15px 15px 15px 25px;
+		margin-bottom: $content_margin;
+		background: $color_content;
+		border-left: 3px solid $color_blue;
+
+		& > :last-child {
+			margin-bottom: 0;
+		}
+
+	}
+
+}
+
+
+// Стиль для изображений с подписью
+
+.content {
+
+	.wp-caption-text {
+		text-align: center;
+		font-style: italic;
+		font-size: 14px;
+		line-height: 1.3;
+	}
+
+	.wp-caption {
+		display: block;
+		max-width: 100%;
+		box-sizing: border-box;
+		padding: 4px;
+		background: $color_gray;
+		margin: 0 auto $content_margin;
+		overflow: hidden;
+
+		&.alignleft {
+			margin: 5px 20px 10px 0;
+		}
+
+		&.alignright {
+			margin: 5px 0 10px 20px;
+		}
+
+		.wp-caption-text {
+			padding: 12px;
+			margin: 0;
+		}
+
+		img {
+			margin: 0;
+		}
+
+	}
+
+}
+
+// Стиль для содержания статьи
+
+.toc_container {
+	padding: 15px 20px 17px;
+	margin: $content_margin 0;
+	border-radius: 2px;
+	background-color: $color_content;
+
+	ul {
+		margin-bottom: 0;
+	}
+
+}
+
+.toc_title {
+	margin-bottom: 12px;
+	font-size: 16px;
+	line-height: 1.3;
+	font-weight: 400;
+}
+
+.btn {
+	font-size: 16px;
+	color: $color_blue;
+	text-decoration: none;
+	cursor: pointer;
+	display: none;
+
+	&:hover {
+		text-decoration: none;
+		color: $color_main;
+	}
+
+	&.active {
+		display: inline;
+	}
+
+
+}
+
+// Стиль для галереи
+
+.gallery {
+	overflow: hidden;
+	margin: 0 -10px 10px 0;
+	font-size: 0;
+	line-height: 0;
+
+	.gallery-item {
+		display: inline-block;
+		width: 33.33%;
+		padding: 0;
+		margin: 0 0 10px;
+		vertical-align: top;
+	}
+
+
+
+	.gallery-icon {
+		display: block;
+		position: relative;
+		overflow: hidden;
+		padding: 10px;
+		margin: 0 10px 0 0;
+		background: $color_content;
+
+		a, img {
+			display: block;
+			width: 100%;
+			height: auto;
+			margin: 0;
+			padding: 0;
+		}
+
+	}
+
+	.gallery-caption {
+		display: block;
+		position: relative;
+		overflow: hidden;
+		padding: 0 10px 10px;
+		margin: 0 10px 0 0;
+		background: $color_content;
+	}
+
+}
+
+.gallery-columns-1 .gallery-item {
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	width: 50%;
+}
+
+.gallery-columns-4 .gallery-item {
+	width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	width: 11.11%;
+}
+
+.gallery-columns-6 .gallery-caption,
+.gallery-columns-7 .gallery-caption,
+.gallery-columns-8 .gallery-caption,
+.gallery-columns-9 .gallery-caption {
+	display: none;
+}
