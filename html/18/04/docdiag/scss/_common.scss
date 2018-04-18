@@ -1,4 +1,4 @@
-@font-@font-face {
+@font-face {
 	font-family: 'PFDinCondensed-Regular';
 	src: url('../fonts/PFDinCondensed-Regular.eot');
 	src: url('../fonts/PFDinCondensed-Regular.woff') format('woff'), url('../fonts/PFDinCondensed-Regular.ttf') format('truetype'), url('../fonts/PFDinCondensed-Regular.svg') format('svg');
@@ -2208,7 +2208,7 @@ input[type="submit"] {
       font-weight: bold;
     }
     .select2-selection__placeholder {
-      color: #999;
+      color: #4f4f4f;
     }
     .select2-selection__arrow {
       height: 38px;
@@ -3059,5 +3059,32 @@ input[type="submit"] {
 	}
 	&.ico_doc_3{
 		background: url(../images/ico_doc_3.png) no-repeat 13px 50%;
+	}
+}
+.item.callback{
+	text-align: right;
+	.phone_t{
+		display: block;
+		font-size:14px;
+	}
+	.phone{
+		font-family: 'PFDinCondensed-Medium', sans-serif;
+		font-size:24px;
+		display: block;
+		margin-bottom:4px;
+	}
+	a{
+		background: #028ab3;
+		color:#fff;
+		padding: 4px  23px 5px;
+		border-radius: 3px;
+		text-transform: uppercase;
+		text-decoration: none;
+		text-align: center;
+	  font-family: 'PFDinCondensed-Medium', sans-serif;
+		font-size:18px;
+		&:hover{
+			background: #6a6a6a;
+		}
 	}
 }
