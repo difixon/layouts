@@ -1410,8 +1410,8 @@ input[type="submit"] {
     cursor: pointer;
     -webkit-transition: 0.3s ease;
     transition: 0.3s ease;
-    /*
-    &:hover {
+    	/*
+    	&:hover {
     	border-color: $color_blue;
     	color: $color_blue;
     }
@@ -2349,6 +2349,8 @@ input[type="submit"] {
 .diag-timetable, .doc-timetable {
   line-height: 23px;
   margin-top: 20px; }
+  .diag-timetable.margbot, .doc-timetable.margbot {
+    margin-bottom: 30px; }
   .diag-timetable span, .doc-timetable span {
     font-weight: bold; }
   .diag-timetable .diag-time, .doc-timetable .diag-time {
@@ -2465,7 +2467,7 @@ input[type="submit"] {
 .diag-block .row, .doc-block .row {
   line-height: 1.6;
   font-size: 100%; }
-.diag-block .contacts_map .map, .doc-block .contacts_map .map {
+.diag-block.contacts_map .map, .doc-block.contacts_map .map {
   height: 280px;
   width: 100%; }
 .diag-photo, .doc-photo {
@@ -2662,6 +2664,65 @@ input[type="submit"] {
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 5px; }
+
+.clinic-photo {
+  max-width: 200px;
+  margin: 5px 10px 0 0;
+  float: left;
+  padding: 0;
+  height: 220px;
+  line-height: 220px;
+  text-align: center;
+  width: 200px; }
+  .clinic-photo img {
+    max-width: 200px;
+    margin: 0;
+    display: inline-block; }
+
+.diag-info .nav_diag {
+  list-style-type: none; }
+  .diag-info .nav_diag li {
+    display: inline-block;
+    padding-left: 0;
+    padding-right: 16px; }
+    .diag-info .nav_diag li:after {
+      content: ' ';
+      position: absolute;
+      top: 3px;
+      bottom: 3px;
+      right: 6px;
+      border-left: 1px solid #dadada;
+      width: auto;
+      height: auto;
+      border-radius: none;
+      background-color: none;
+      left: auto; }
+    .diag-info .nav_diag li:last-child:after {
+      content: none; }
+    .diag-info .nav_diag li:before {
+      content: none; }
+    .diag-info .nav_diag li a {
+      color: #363636; }
+      .diag-info .nav_diag li a:hover {
+        color: #028ab3;
+        text-decoration: none; }
+
+.diag-metro_inner {
+  line-height: 28px;
+  text-align: left;
+  margin-top: 10px; }
+  .diag-metro_inner span {
+    padding: 0 12px 0 0; }
+  .diag-metro_inner .diag-circle {
+    margin-right: 3px; }
+    .diag-metro_inner .diag-circle:nth-child(3) {
+      background-color: #0a6f20; }
+    .diag-metro_inner .diag-circle:nth-child(5) {
+      background-color: #ee2920; }
+    .diag-metro_inner .diag-circle:nth-child(7) {
+      background-color: #0078bf; }
+    .diag-metro_inner .diag-circle:nth-child(9) {
+      background-color: #ff7f00; }
 
 @media only screen and (max-width: 1024px) {
   .fixed {
