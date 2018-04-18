@@ -506,7 +506,7 @@ input[type="submit"] {
 .main_menu {
   position: relative;
   border-bottom: 2px solid #ececec;
-  margin-bottom: 30px; }
+  margin-bottom: 20px; }
   .main_menu .menu_btn {
     vertical-align: middle;
     font-size: 20px;
