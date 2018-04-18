@@ -19,15 +19,28 @@ function formatdefault(icon) {
 }
 	
 	
-$('.select-home-speciality').select2({
+$('.select-home-spec').select2({
     width: "100%",
-	placeholder: "Выберите специальность",
+	placeholder: "Направление диагностики",
 	templateSelection: formatdefault,
 });
 
-$('.select-home-place').select2({
+$('.select-home-metro').select2({
     width: "100%",
-	placeholder: "Метро, район",
+	placeholder: "Метро, города Московской области",
+	templateSelection: formatdefault,
+    templateResult: format
+});	
+
+$('.select-home-metro1').select2({
+    width: "100%",
+	placeholder: "Станция метро",
+	templateSelection: formatdefault,
+});
+
+$('.select-home-cityes').select2({
+    width: "100%",
+	placeholder: "Города Московской области",
 	templateSelection: formatdefault,
     templateResult: format
 });	
@@ -35,63 +48,7 @@ $('.select-home-place').select2({
 
 
 
-$('.select-uslugi-place').select2({
-    width: "100%",
-	placeholder: "Метро, район",
-	templateSelection: formatdefault,
-    templateResult: format
-});	
 
-$('.select-uslugi-speciality').select2({
-    width: "100%",
-	placeholder: "Услуга",
-	templateSelection: formatdefault,
-});
-
-
-
-$('.select-diagnostic-place').select2({
-    width: "100%",
-	placeholder: "Метро, район",
-	templateSelection: formatdefault,
-    templateResult: format
-});	
-
-$('.select-diagnostic-speciality').select2({
-    width: "100%",
-	placeholder: "Диагностика",
-	templateSelection: formatdefault,
-});
-
-
-
-$('.select-taxonomy-spec-speciality').select2({
-	width: "100%",
-	placeholder: "Выберите специальность",
-	templateSelection: formatdefault,
-});
-
-$('.select-taxonomy-spec-place').select2({
-    width: "100%",
-	placeholder: "Метро, район",
-	templateSelection: formatdefault,
-    templateResult: format
-});	
-
-
-
-$('.select-taxonomy-clinic-spec-speciality').select2({
-	width: "100%",
-	placeholder: "Выберите специальность",
-	templateSelection: formatdefault,
-});
-
-$('.select-taxonomy-clinic-spec-place').select2({
-    width: "100%",
-	placeholder: "Метро, район",
-	templateSelection: formatdefault,
-    templateResult: format
-});	
 
 
 
