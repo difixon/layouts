@@ -2670,14 +2670,21 @@ input[type="submit"] {
   margin: 5px 10px 0 0;
   float: left;
   padding: 0;
+  display: table-cell;
+  vertical-align: middle;
   height: 220px;
   line-height: 220px;
   text-align: center;
-  width: 200px; }
+  width: 200px;
+  position: relative; }
   .clinic-photo img {
-    max-width: 200px;
-    margin: 0;
-    display: inline-block; }
+    position: absolute;
+    margin: auto;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    max-width: 200px; }
 
 .diag-info .nav_diag {
   list-style-type: none; }
