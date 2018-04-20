@@ -3061,7 +3061,7 @@ table.sec_center th:last-child, table.sec_center td:last-child {
       display: block;
       width: auto;
       text-align: center;
-      min-height: 100px; }
+      min-height: 85px; }
     .header_inner .search {
       margin-top: 15px; }
 
