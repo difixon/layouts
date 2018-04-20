@@ -307,6 +307,9 @@ article, aside, details, figcaption, figure, footer, header, menu, nav, section 
   font-family: 'PFDinTextCompProRegular';
   src: url("../fonts/pfdintextcomppro-regular.eot");
   src: url("../fonts/pfdintextcomppro-regular.eot") format("embedded-opentype"), url("../fonts/pfdintextcomppro-regular.woff") format("woff"), url("../fonts/pfdintextcomppro-regular.ttf") format("truetype"), url("../fonts/pfdintextcomppro-regular.svg#PFDinTextCompProRegular") format("svg"); }
+html {
+  -webkit-text-size-adjust: 100%; }
+
 html, body {
   height: 100%; }
 
