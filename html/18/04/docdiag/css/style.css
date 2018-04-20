@@ -2223,7 +2223,7 @@ input[type="submit"] {
 
 .doc_search {
   background: #028ab3;
-  padding: 10px 20px 0;
+  padding: 15px 20px 0;
   margin-bottom: 20px; }
   .doc_search__title {
     font-size: 16px;
@@ -3285,4 +3285,5 @@ table.sec_center th:last-child, table.sec_center td:last-child {
     width: 280px;
     background-size: 280px auto;
     font-size: 11px; } }
+
 /*# sourceMappingURL=style.css.map */
