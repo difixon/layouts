@@ -12,6 +12,9 @@
 	.footer_nav {
 		width: 65%;
 	}
+	.sorting-field .item:nth-child(2){
+		margin-left: 7px;
+	}
 
 }
 
@@ -235,7 +238,74 @@
 		}
 
 	}
-
+	.sorting-field{
+		.item:last-child{
+			float: none;
+		}
+	}
+	.diag-block{
+		.diag-info{
+			width:100%;
+		}
+		.diag-item {
+			.col_1_4{
+				width:35%;
+			}
+			.diag-info{
+				width: 65%;
+			}
+		}
+		.diag-callback_outer{
+			min-width: 180px;
+		}
+	}
+	.diag-title, .doc-title{
+		text-align: left;
+		max-width: 300px;
+	}
+	.doc-prom{
+		padding:110px 15px 15px 15px !important;
+		text-align: center;
+		&.ico_doc_1,&.ico_doc_2,&.ico_doc_3{
+			background-position: 50% 13px;
+		}
+	}
+	.doc-100{
+		&.col_1_2,&.col_2_3,&.col_1_3{
+			width:100%;
+		}
+		&.col_1_2 .doc-about-block,&.col_2_3 .doc-about-block{
+			float: left;
+			margin: 0 10px 0 0;
+		}
+	}
+	.col_1_3.doc-callback-absolute{
+		position: absolute;
+    top: 9px;
+    right: 27px;
+    width: 155px!important;
+		margin-right: 10px;
+	}
+	.sorting-field {
+		.item{
+			&:nth-child(2){
+				margin-left: 0;
+				margin-right: 0;
+			}
+			.sotring-filter{
+				margin-left: 0;
+				margin-right: 10px;
+			}
+		}
+	}
+	.doc-item-top{
+		min-height: 240px;
+	}
+	.doc-callback.thin,.doc-clinic-rating.thin{
+		float: none;
+		width: auto;
+		min-width: 146px;
+	}
 }
 
 @include media(768) {
@@ -316,6 +386,33 @@
 		}
 
 	}
+	.sorting-field{
+		.item{
+			margin-right: 30px;
+			&:last-child{
+				text-align: left;
+			}
+		}
+	}
+	.diag-block {
+		.col_1_4{
+			width:100%;
+			.diag-callback{
+				max-width: 200px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+		.diag-info{
+			width: 100%;
+		}
+	}
+	.col_1_3.doc-callback-absolute{
+		position: relative;
+		right:auto;
+		left:20px;
+
+	}
 
 }
 
@@ -342,14 +439,57 @@
 	}
 	.posts{
 		.col_5_12{
-			width: 50%;
+			width: 100%;
 		}
 
 		.col_1_6{
 			width: 100%;
 		}
 	}
-
+	.diag-cat, .doc-cat{
+		width:auto;
+	}
+	.diag-costs, .doc-costs{
+		min-width: 25%;
+		width:auto;
+	}
+	.clinic-photo{
+		float:none;
+	}
+	.col_1_3.doc-callback-absolute{
+		width: 100%!important;
+		left:auto;
+		right: auto;
+		.doc-callback.thin,.doc-clinic-rating.thin{
+			float: none;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	.doc-100{
+		&.col_1_2,&.col_2_3{
+			.doc-about-block{
+				margin: 0 2.5% 5%;
+				width: 43%;
+			}
+		}
+	}
+	.doc-prom-outer{
+		 .col_1_3{
+			 width:100%;
+			 .doc-prom.ico_doc_1, .doc-prom.ico_doc_2, .doc-prom.ico_doc_3{
+				 background-position: 13px 50%;
+			 }
+			 .doc-prom{
+				 padding:15px 15px 15px 110px !important;
+			 }
+		 }
+	}
+	.related_docs.col_1_3{
+		width: 240px;
+		margin: 0 auto 20px;
+		flex-grow: 0;
+	}
 }
 
 @include media(480) {
@@ -446,7 +586,51 @@
 		}
 
 	}
+	.diag-costs, .doc-costs{
+		min-width: 25%;
+		width:100%;
+		margin-top: 10px;
+		text-align: right;
+	}
+	.diag-info{
+		width:100%!important;
+	}
+	.diag-callback_outer{
+		width:100%!important;
+	}
+	.doc-photo{
+		float:none;
+		margin: 0 auto;
+	}
+	.diag-title, .doc-title{
+		text-align: center;
+		max-width:none;
+	}
+	.doc-proff{
+		text-align: center;
+	}
+	.col_1_2,.col_2_3{
+		&.doc-100{
+			.doc-about-block{
+				width:19%;
+			}
+		}
+	}
 
+	.doc-item-top{
+		min-height:unset;
+	}
+	.doc-call-inside{
+		width:100%!important;
+	}
+	.doc-ttable-outer{
+		.col_1_5{
+			width: 50%;
+			.doc-ttable{
+				width: 87%;
+			}
+		}
+	}
 }
 
 @include media(420) {
