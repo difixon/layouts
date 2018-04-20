@@ -740,6 +740,10 @@ input[type="submit"] {
 	&.normal {
 		text-transform: none;
 	}
+	&.thin {
+		text-transform: uppercase;
+		font-family: 'PFDinTextCompProRegular', sans-serif;
+	}
 
 }
 
@@ -1544,7 +1548,7 @@ input[type="submit"] {
 	overflow: hidden;
 
 	.title {
-		font-size: 16px;
+		font-size: 15px;
 		font-style: italic;
 		margin-bottom: 15px;
 	}
@@ -2632,7 +2636,7 @@ input[type="submit"] {
 	&_form{
 		font-family: 'PFDinCondensed-Medium', sans-serif;
 		color:#fff;
-		font-size:28px;
+		font-size:25px;
 		font-weight: normal;
 		line-height: 1.2;
 	}
@@ -2779,7 +2783,7 @@ input[type="submit"] {
 	display: inline-block;
 	vertical-align: middle;
 	margin-top: -2px;
-	margin-right: 4px;
+	margin-right: 2px;
 }
 .doc-circle_outer{
 	display: inline-block;
@@ -3036,6 +3040,7 @@ input[type="submit"] {
 .doc-adress{
 	display: inline-block;
 	margin-top: 0;
+	margin-right: 10px;
 }
 .doc-cityes{
 	margin-bottom: 20px;
@@ -3079,7 +3084,7 @@ input[type="submit"] {
 		color:#6a6a6a;
 		text-align: center;
 		font-family: 'PFDinCondensed-Medium', sans-serif;
-		font-size: 14px;
+		font-size: 16px;
 		height:25px;
 		line-height:25px;
 	}
@@ -3296,6 +3301,9 @@ input[type="submit"] {
 		padding:0 20px 10px;
 		text-align: center;
 	}
+	.doc-circle{
+		margin-right: 0;
+	}
 }
 .real_comments{
 	background: #dfeff4 url(../images/real_comments.png) no-repeat 20px 50%;
@@ -3396,7 +3404,7 @@ input[type="submit"] {
 	}
 }
 .marg-bot-20{
-	margin-bottom: 60px;
+	margin-bottom: 40px;
 }
 table.sec_center{
 	th,td{

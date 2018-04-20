@@ -825,6 +825,9 @@ input[type="submit"] {
     background: url(../images/ico_4.png) 0 3px no-repeat; }
   .block_title.normal {
     text-transform: none; }
+  .block_title.thin {
+    text-transform: uppercase;
+    font-family: 'PFDinTextCompProRegular', sans-serif; }
 
 .row {
   display: -webkit-box;
@@ -1426,7 +1429,7 @@ input[type="submit"] {
   margin-bottom: 20px;
   overflow: hidden; }
   .share_social .title {
-    font-size: 16px;
+    font-size: 15px;
     font-style: italic;
     margin-bottom: 15px; }
 
@@ -2213,7 +2216,7 @@ input[type="submit"] {
   .doc_search_form {
     font-family: 'PFDinCondensed-Medium', sans-serif;
     color: #fff;
-    font-size: 28px;
+    font-size: 25px;
     font-weight: normal;
     line-height: 1.2; }
   .doc_search .filter-button {
@@ -2315,7 +2318,7 @@ input[type="submit"] {
   display: inline-block;
   vertical-align: middle;
   margin-top: -2px;
-  margin-right: 4px; }
+  margin-right: 2px; }
 
 .doc-circle_outer {
   display: inline-block;
@@ -2507,7 +2510,8 @@ input[type="submit"] {
 
 .doc-adress {
   display: inline-block;
-  margin-top: 0; }
+  margin-top: 0;
+  margin-right: 10px; }
 
 .doc-cityes {
   margin-bottom: 20px;
@@ -2544,7 +2548,7 @@ input[type="submit"] {
     color: #6a6a6a;
     text-align: center;
     font-family: 'PFDinCondensed-Medium', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     height: 25px;
     line-height: 25px; }
   .doc-about-block:after {
@@ -2739,6 +2743,8 @@ input[type="submit"] {
   .related_docs .doc-metro {
     padding: 0 20px 10px;
     text-align: center; }
+  .related_docs .doc-circle {
+    margin-right: 0; }
 
 .real_comments {
   background: #dfeff4 url(../images/real_comments.png) no-repeat 20px 50%;
@@ -2820,7 +2826,7 @@ input[type="submit"] {
       background-color: #ff7f00; }
 
 .marg-bot-20 {
-  margin-bottom: 60px; }
+  margin-bottom: 40px; }
 
 table.sec_center th:last-child, table.sec_center td:last-child {
   text-align: center; }
