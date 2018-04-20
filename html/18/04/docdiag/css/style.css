@@ -3060,7 +3060,8 @@ table.sec_center th:last-child, table.sec_center td:last-child {
     .header_inner .item {
       display: block;
       width: auto;
-      text-align: center; }
+      text-align: center;
+      min-height: 100px; }
     .header_inner .search {
       margin-top: 15px; }
 
