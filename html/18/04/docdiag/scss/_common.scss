@@ -2151,11 +2151,21 @@ input[type="submit"] {
 		border-bottom: none;
 		border-bottom-left-radius: 0;
 		border-bottom-right-radius: 0;
+		display: flex;
+    flex-direction: column;
+		margin-top: 38px;
+		.select2-search--dropdown{
+			order: 2;
+		}
+		.select2-results{
+			order: 1;
+		}
 	}
 	.select2-dropdown--below {
 		border-top: none;
 		border-top-left-radius: 0;
 		border-top-right-radius: 0;
+		margin-top: -38px;
 	}
 }
 
