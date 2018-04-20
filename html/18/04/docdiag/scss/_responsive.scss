@@ -689,8 +689,3 @@
 @include media(320) {
 
 }
-@media only screen and (min-device-width : 320px) and (max-device-width : 1024px) {
-     html {
-        -webkit-text-size-adjust: 100%;
-     }
-}

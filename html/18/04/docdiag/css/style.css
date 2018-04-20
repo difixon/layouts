@@ -3285,8 +3285,5 @@ table.sec_center th:last-child, table.sec_center td:last-child {
     width: 280px;
     background-size: 280px auto;
     font-size: 11px; } }
-@media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
-  html {
-    -webkit-text-size-adjust: 100%; } }
 
 /*# sourceMappingURL=style.css.map */
