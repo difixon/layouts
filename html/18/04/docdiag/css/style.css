@@ -3117,7 +3117,10 @@ table.sec_center th:last-child, table.sec_center td:last-child {
   .col_1_3.doc-callback-absolute {
     position: relative;
     right: auto;
-    left: 20px; } }
+    left: 20px; }
+
+  .doc-callback .doc-phone {
+    font-size: 23px; } }
 @media only screen and (max-width: 640px) {
   .ask .col_1_2, .last_reviews .col_1_2 {
     width: 100%; }
