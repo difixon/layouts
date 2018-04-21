@@ -2873,6 +2873,9 @@ table.sec_center th:last-child, table.sec_center td:last-child {
   .sorting-field .item:nth-child(2) {
     margin-left: 7px; } }
 @media only screen and (max-width: 960px) {
+  * {
+    -webkit-text-size-adjust: 100% !important; }
+
   .main_menu {
     padding-bottom: 10px;
     text-align: justify;

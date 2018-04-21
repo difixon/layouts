@@ -19,8 +19,8 @@
 }
 
 @include media(960) {
-	body {
-    -webkit-text-size-adjust: 100%;
+	*{
+    -webkit-text-size-adjust: 100%!important;
 	}
 	.main_menu {
 		padding-bottom: 10px;
