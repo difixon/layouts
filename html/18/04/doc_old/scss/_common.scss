@@ -1416,19 +1416,19 @@ input[type="submit"] {
 
 	span, a {
 		display: inline-block;
-		vertical-align: middle;
-		padding: 5px 15px 4px;
-		margin: 0 6px 10px 0;
-		border-radius: 3px;
-		border: 1px solid #676767;
-		color: #676767;
-		font-family: 'PFDinCondensed-Medium', sans-serif;
-		font-size: 18px;
-		line-height: 1.2;
-		text-decoration: none;
-		text-transform: uppercase;
-		cursor: pointer;
-		transition: 0.3s ease;
+    vertical-align: middle;
+    padding: 5px 15px 4px;
+    margin: 0 6px 10px 0;
+    border-radius: 1px;
+    border: 1px dotted #676767;
+    color: #676767;
+    font-family: 'PFDinCondensed-Medium', sans-serif;
+    font-size: 17px;
+    line-height: 1.2;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s ease;
 
 		&:hover {
 			background-color: $color_blue;
@@ -1853,6 +1853,7 @@ input[type="submit"] {
 	cursor: default;
   &.thin{
 		margin-bottom: 0;
+		font-size: 15px;
 	}
 	.label, .stars {
 		display: inline-block;

@@ -1329,11 +1329,11 @@ input[type="submit"] {
     vertical-align: middle;
     padding: 5px 15px 4px;
     margin: 0 6px 10px 0;
-    border-radius: 3px;
-    border: 1px solid #676767;
+    border-radius: 1px;
+    border: 1px dotted #676767;
     color: #676767;
     font-family: 'PFDinCondensed-Medium', sans-serif;
-    font-size: 18px;
+    font-size: 17px;
     line-height: 1.2;
     text-decoration: none;
     text-transform: uppercase;
@@ -1626,7 +1626,8 @@ input[type="submit"] {
   margin-bottom: 20px;
   cursor: default; }
   .rating_block.thin {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    font-size: 15px; }
   .rating_block .label, .rating_block .stars {
     display: inline-block;
     font-size: 16px;
