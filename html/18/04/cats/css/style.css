@@ -1626,7 +1626,8 @@ input[type="submit"] {
   margin-bottom: 20px;
   cursor: default; }
   .rating_block.thin {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    font-size: 15px; }
   .rating_block .label, .rating_block .stars {
     display: inline-block;
     font-size: 16px;
