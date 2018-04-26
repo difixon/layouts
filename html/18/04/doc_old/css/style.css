@@ -398,7 +398,7 @@ input[type="submit"] {
 
 .top_line {
   background-color: #6a6a6a;
-  padding: 8px 0;
+  padding: 4px 0;
   font-size: 14px;
   line-height: 1.3;
   color: #ffffff; }
@@ -1010,7 +1010,7 @@ input[type="submit"] {
   font-size: 16px;
   line-height: 1.3;
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   color: #363636;
   cursor: pointer;
   -webkit-transition: 0.3s ease;
@@ -1056,7 +1056,7 @@ input[type="submit"] {
 .last_reviews .title {
   line-height: 1.3;
   font-weight: 700;
-  margin-bottom: 15px; }
+  margin-bottom: 10px; }
 .last_reviews .text {
   line-height: 1.5;
   font-style: italic; }
@@ -3051,7 +3051,7 @@ table.sec_center th:last-child, table.sec_center td:last-child {
 
 .header_ico {
   list-style-type: none;
-  line-height: 30px; }
+  line-height: 23px; }
   .header_ico .h_ico_house {
     background: url(../images/ico_house.png) no-repeat;
     width: 16px;
