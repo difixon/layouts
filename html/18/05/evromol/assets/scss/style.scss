@@ -2378,7 +2378,7 @@ footer {
       height: 3px;
     }
   }
-  .headerMain, .header {
+  .headerMain {
     .headerMainDown,.headerDown {
       .navbar {
         justify-content: center;
@@ -2390,6 +2390,18 @@ footer {
       margin-top: 10px;
     }
     min-height: 750px;
+  }
+  .header {
+    .headerDown {
+      .navbar {
+        justify-content: center;
+        .nav-item .nav-link {
+          text-align: center;
+          padding: 10px 30px;
+        }
+      }
+      margin-top: 10px;
+    }
   }
   .bgLightBlue:before {
     height: 80px;

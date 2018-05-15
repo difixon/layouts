@@ -2526,18 +2526,31 @@ footer {
     height: 3px;
   }
 
-  .headerMain, .header {
+  .headerMain {
     min-height: 750px;
   }
-  .headerMain .headerMainDown, .headerMain .headerDown, .header .headerMainDown, .header .headerDown {
+  .headerMain .headerMainDown, .headerMain .headerDown {
     margin-top: 10px;
   }
-  .headerMain .headerMainDown .navbar, .headerMain .headerDown .navbar, .header .headerMainDown .navbar, .header .headerDown .navbar {
+  .headerMain .headerMainDown .navbar, .headerMain .headerDown .navbar {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .headerMain .headerMainDown .navbar .nav-item .nav-link, .headerMain .headerDown .navbar .nav-item .nav-link, .header .headerMainDown .navbar .nav-item .nav-link, .header .headerDown .navbar .nav-item .nav-link {
+  .headerMain .headerMainDown .navbar .nav-item .nav-link, .headerMain .headerDown .navbar .nav-item .nav-link {
+    text-align: center;
+    padding: 10px 30px;
+  }
+
+  .header .headerDown {
+    margin-top: 10px;
+  }
+  .header .headerDown .navbar {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .header .headerDown .navbar .nav-item .nav-link {
     text-align: center;
     padding: 10px 30px;
   }
