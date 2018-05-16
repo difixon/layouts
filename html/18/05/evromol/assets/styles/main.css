@@ -2587,7 +2587,8 @@ footer {
   }
 
   .innerPage .innerPageBlock h1, .single_post .post_text h2 {
-    font-size: 30px;
+    font-size: 24px;
+    line-height: 35px;
   }
 }
 @media screen and (max-width: 575px) {
