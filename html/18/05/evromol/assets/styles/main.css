@@ -1232,7 +1232,7 @@
   width: 100%;
 }
 .single_post .post_text {
-  padding: 65px 30px 80px;
+  padding: 65px 25px 80px;
   max-width: 810px;
 }
 .single_post .post_text h2 {
@@ -2587,7 +2587,7 @@ footer {
   }
 
   .innerPage .innerPageBlock h1, .single_post .post_text h2 {
-    font-size: 24px;
+    font-size: 22px;
     line-height: 35px;
   }
 }
