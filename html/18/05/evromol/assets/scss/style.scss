@@ -1220,7 +1220,7 @@
       height: 60px;
       margin-right: 20px;
     }
-    .col-md-4{
+    .col-sm-4{
       &:nth-child(1){
         .product_pluse{
           background: url(../img/icon_plus1.png) no-repeat 50% 50%;
@@ -1237,7 +1237,7 @@
         }
       }
     }
-    .col-md-4{
+    .col-sm-4{
       padding: 34px 20px 34px 50px;
       font-size: 18px;
       font-weight: 600;
@@ -2539,6 +2539,20 @@ footer {
   .map{
     height: 830px;
   }
+  .single_product .product_pluses .col-sm-4{
+    padding-left: 20px;
+  }
+  .single_product .product_pluses .col-sm-4:first-child{
+    padding-left: 35px;
+  }
+  .single_product .product_pluses .product_pluse{
+    margin-right: 8px;
+  }
+  .product_img{
+    img{
+      max-width: 100%;
+    }
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -2749,6 +2763,21 @@ footer {
       left: auto;
     }
   }
+  .productForm{
+    padding: 0 15px;
+  }
+  .product_about_right{
+    display: none;
+  }
+  .single_product .product_about_left{
+    background: #fff;
+    padding-left: 27px;
+    margin-left: -15px;
+    width: auto;
+  }
+  .single_product .product_about{
+    background: none;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -2845,6 +2874,12 @@ footer {
   .aboutPage .company_info{
     margin-bottom: 20px;
   }
+  .single_product .product_about_left{
+    margin-left: 0;
+  }
+  .single_product .product_pluses .col-sm-4{
+    display: block;
+  }
 }
 
 @media screen and (max-width: 575px) {
@@ -2919,6 +2954,10 @@ footer {
         }
       }
     }
+  }
+  .single_product .product_pluses .col-sm-4{
+    padding: 16px 20px 15px 35px;
+    display: flex;
   }
 }
 
@@ -3035,6 +3074,9 @@ footer {
   .itemBig .itemText {
     word-wrap: break-word;
   }
+  .single_product .product_tabs .tablink{
+    font-size: 11px;
+  }
 }
 
 @media screen and (max-width: 390px) {
@@ -3126,6 +3168,17 @@ footer {
   }
   .map .contactInfo .contactInfoRight{
     width: 100%;
-    margin-top: 20px; 
+    margin-top: 20px;
+  }
+  .map .contactInfo .contactInfoLeft{
+    width: 100%;
+    p{
+      width: 100%;
+    }
+  }
+  .btn-outline-primary.downloadBtn{
+    font-size: 12px;
+    padding: 20px 24px 20px 65px;
+
   }
 }
