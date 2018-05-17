@@ -107,7 +107,70 @@
         </ol>
       </div>
       <h1>Контакты</h1>
-      <div class="map"><div id="map"></div>
+      <div class="map">
+        <div class="innerPageBottom">
+          <div class="mainFormBlock">
+            <div class="contactInfo">
+              <div class="contactInfoLeft">
+                <div class="contactInfoTop">
+                  <a href="tel:88001034869" class="contactMobile">8 (800) 103-48-69</a>
+                  <p>Бесплатно по России</p>
+                </div>
+                <div class="contactInfoBottom">
+                  <a href="tel:88001034869" class="contactMobile">8 (495) 103-48-69</a>
+                  <a href="mailto:info@evromol.com" class="contactEMail">info@evromol.com</a>
+                </div>
+              </div>
+              <div class="contactInfoRight">
+                <p>Московская область,
+                <br />Люберецкий р-н, пос.
+                <br />Октябрьский, ул.
+                <br />Дорожная, д. 10, оф. 9</p>
+              </div>
+            </div>
+            <div class="mainFormLeft">
+              <div class="mainFormLeftHead">Связаться с нами</div>
+              <form class="jiroInputs">
+                <div class="jiroFormGroup">
+                  <span class="input input--jiro">
+                    <input class="input__field input__field--jiro" type="text" name="your_name" id="your_name" />
+                    <label class="input__label input__label--jiro" for="your_name">
+                      <span class="input__label-content input__label-content--jiro">Ваше имя</span>
+                    </label>
+                  </span>
+                </div>
+                <div class="jiroFormGroup">
+                  <span class="input input--jiro">
+                    <input class="input__field input__field--jiro" type="phone" name="your_phone" id="your_phone" />
+                    <label class="input__label input__label--jiro" for="your_phone">
+                      <span class="input__label-content input__label-content--jiro">Телефон</span>
+                    </label>
+                  </span>
+                </div>
+                <div class="jiroFormGroup">
+                  <section>
+                    <select class="cs-select cs-skin-elastic">
+                      <option value="" disabled selected>Удобное время</option>
+                      <option value="11:11">11:11</option>
+                      <option value="10:10">10:10</option>
+                      <option value="12:12">12:12</option>
+                    </select>
+                  </section>
+                </div>
+                <div class="jiroFormGroup">
+                  <select class="cs-select cs-skin-elastic">
+                    <option value="" disabled selected>Выберите страну</option>
+                    <option value="Россия">Россия</option>
+                    <option value="Франция">Франция</option>
+                    <option value="Казахстан">Казахстан</option>
+                  </select>
+                </div>
+                <button class="btn btn-light btn-lg">Отправить</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div id="map"></div>
       <script>
       function initMap() {
         var uluru = {lat: -25.363, lng: 131.044};
@@ -124,68 +187,7 @@
       <script async defer
       src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
       </script>
-      <div class="innerPageBottom">
-        <div class="mainFormBlock">
-          <div class="contactInfo">
-            <div class="contactInfoLeft">
-              <div class="contactInfoTop">
-                <a href="tel:88001034869" class="contactMobile">8 (800) 103-48-69</a>
-                <p>Бесплатно по России</p>
-              </div>
-              <div class="contactInfoBottom">
-                <a href="tel:88001034869" class="contactMobile">8 (495) 103-48-69</a>
-                <a href="mailto:info@evromol.com" class="contactEMail">info@evromol.com</a>
-              </div>
-            </div>
-            <div class="contactInfoRight">
-              <p>Московская область,
-              <br />Люберецкий р-н, пос.
-              <br />Октябрьский, ул.
-              <br />Дорожная, д. 10, оф. 9</p>
-            </div>
-          </div>
-          <div class="mainFormLeft">
-            <div class="mainFormLeftHead">Связаться с нами</div>
-            <form class="jiroInputs">
-              <div class="jiroFormGroup">
-                <span class="input input--jiro">
-                  <input class="input__field input__field--jiro" type="text" name="your_name" id="your_name" />
-                  <label class="input__label input__label--jiro" for="your_name">
-                    <span class="input__label-content input__label-content--jiro">Ваше имя</span>
-                  </label>
-                </span>
-              </div>
-              <div class="jiroFormGroup">
-                <span class="input input--jiro">
-                  <input class="input__field input__field--jiro" type="phone" name="your_phone" id="your_phone" />
-                  <label class="input__label input__label--jiro" for="your_phone">
-                    <span class="input__label-content input__label-content--jiro">Телефон</span>
-                  </label>
-                </span>
-              </div>
-              <div class="jiroFormGroup">
-                <section>
-                  <select class="cs-select cs-skin-elastic">
-                    <option value="" disabled selected>Удобное время</option>
-                    <option value="11:11">11:11</option>
-                    <option value="10:10">10:10</option>
-                    <option value="12:12">12:12</option>
-                  </select>
-                </section>
-              </div>
-              <div class="jiroFormGroup">
-                <select class="cs-select cs-skin-elastic">
-                  <option value="" disabled selected>Выберите страну</option>
-                  <option value="Россия">Россия</option>
-                  <option value="Франция">Франция</option>
-                  <option value="Казахстан">Казахстан</option>
-                </select>
-              </div>
-              <button class="btn btn-light btn-lg">Отправить</button>
-            </form>
-          </div>
-        </div>
-      </div>
+
     </div>
   </div>
 </div>
