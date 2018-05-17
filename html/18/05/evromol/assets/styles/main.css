@@ -1200,6 +1200,7 @@
   bottom: 0;
   padding: 0;
   left: 40px;
+  z-index: 2;
 }
 
 .post_info {
@@ -2644,6 +2645,10 @@ footer {
   .innerPageBottom .mainFormBlock .itemsRow {
     width: 387px;
   }
+
+  .map {
+    height: 830px;
+  }
 }
 @media screen and (max-width: 991px) {
   .gostSertBg .gostSertBlock .gostSertRight img {
@@ -2866,6 +2871,17 @@ footer {
     width: 100%;
     margin-bottom: 30px;
   }
+
+  .map {
+    height: auto;
+  }
+  .map .innerPageBottom {
+    max-width: none;
+    position: relative;
+    bottom: auto;
+    padding: 0;
+    left: auto;
+  }
 }
 @media screen and (max-width: 767px) {
   .headerMain .headerMainTop, .header .headerTop {
@@ -3043,6 +3059,22 @@ footer {
   }
   .aboutPage .company_info > div {
     margin-left: 20px;
+  }
+
+  .map .contactInfo {
+    padding: 0 0 50px;
+  }
+  .map .contactInfo .contactInfoRight {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .map .contactInfo .contactInfoRight p {
+    padding-left: 42px;
+    width: auto;
+  }
+  .map .contactInfo .contactInfoRight p:before {
+    left: 0;
   }
 }
 @media screen and (max-width: 500px) {
@@ -3277,5 +3309,10 @@ footer {
 
   footer {
     padding: 40px 0 0px 0;
+  }
+
+  .map .contactInfo .contactInfoRight {
+    width: 100%;
+    margin-top: 20px;
   }
 }

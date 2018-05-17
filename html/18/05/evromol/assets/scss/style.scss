@@ -1091,6 +1091,7 @@
     bottom: 0;
     padding: 0;
     left: 40px;
+    z-index: 2;
   }
 }
 .post_info{
@@ -2535,6 +2536,9 @@ footer {
   .innerPageBottom .mainFormBlock .itemsRow{
     width:387px;
   }
+  .map{
+    height: 830px;
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -2735,6 +2739,16 @@ footer {
     width: 100%;
     margin-bottom: 30px;
   }
+  .map{
+    height: auto;
+    .innerPageBottom{
+      max-width: none;
+      position: relative;
+      bottom: auto;
+      padding: 0;
+      left: auto;
+    }
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -2887,10 +2901,23 @@ footer {
     padding-top: 15px;
     padding-bottom: 15px;
   }
-  .aboutPage .company_info{ 
+  .aboutPage .company_info{
     display: flex;
     &>div{
       margin-left: 20px;
+    }
+  }
+  .map .contactInfo {
+    padding: 0 0 50px;
+    .contactInfoRight{
+      justify-content: flex-start;
+      p{
+        padding-left: 42px;
+        width: auto;
+        &:before{
+          left: 0;
+        }
+      }
     }
   }
 }
@@ -3096,5 +3123,9 @@ footer {
   }
   footer {
     padding: 40px 0 0px 0;
+  }
+  .map .contactInfo .contactInfoRight{
+    width: 100%;
+    margin-top: 20px;
   }
 }
