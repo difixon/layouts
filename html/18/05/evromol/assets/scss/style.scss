@@ -464,20 +464,20 @@
     width: 100%;
     background-repeat: no-repeat;
     position: relative;
-   .btn {
-     position: relative;
-     z-index: 2;
-     width: 100%;
-     display: none;
-     -webkit-box-pack: center;
-     -ms-flex-pack: center;
-     justify-content: center;
-     -webkit-box-align: center;
-     -ms-flex-align: center;
-     align-items: center;
-     -ms-flex-item-align: end;
-     align-self: flex-end;
-     }
+    .btn {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      display: none;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -ms-flex-item-align: end;
+      align-self: flex-end;
+    }
   }
   .itemMediumThumb{
     height:216px;
@@ -957,7 +957,7 @@
     margin-bottom: 16px;
   }
   .btn-primary{
-      margin: 55px auto 0;
+    margin: 55px auto 0;
   }
 }
 .innerPageBottom{
@@ -1003,6 +1003,12 @@
     text-transform: none!important;
     padding: 43px 0px 0px 51px!important;
     font-weight: bold!important;
+  }
+}
+.productForm{
+  padding: 0;
+  .input--jiro{
+    margin-top: 0;
   }
 }
 #map{
@@ -1130,6 +1136,363 @@
       margin-bottom: 40px;
     }
 
+  }
+}
+.single_product{
+  .product_about{
+    background: #fff;
+    display: inline-flex;
+    margin-bottom: 16px;
+  }
+  .product_about_left{
+    padding:30px 12px 30px;
+    width:480px;
+    .product_title{
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    .product_text{
+      font-size: 15px;
+      line-height: 24px;
+      margin-bottom: 25px;
+      p{
+        margin-bottom: 0;
+      }
+      a{
+        color:#0057ff;
+        text-decoration: underline;
+        &:hover{
+          text-decoration: none;
+        }
+      }
+    }
+    .product_desc{
+      margin-bottom: 32px;
+    }
+    .product_desc{
+      display: inline-block;
+      margin-right: 35px;
+      span{
+        font-size: 15px;
+        &:first-child{
+          font-weight: 600;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  .product_about_right{
+    width:272px;
+    text-align: center;
+    padding-top:37px;
+    border-left: 1px solid #efefef;
+    .product_manager_title{
+      font-size: 18px;
+      line-height: 24px;
+      padding: 0 20px;
+      margin-bottom: 30px;
+      font-weight: 600;
+    }
+    .product_manager_photo{
+      margin-bottom: 20px;
+    }
+    .product_manager_name{
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .product_manager_position{
+      font-size: 13px;
+      color:#878787;
+    }
+  }
+  .product_img{
+    overflow: hidden;
+  }
+  .product_pluses{
+    background: #fff;
+    margin-bottom: 15px;
+    div{
+      display: flex;
+    }
+    .product_pluse{
+      width:60px;
+      height: 60px;
+      margin-right: 20px;
+    }
+    .col-md-4{
+      &:nth-child(1){
+        .product_pluse{
+          background: url(../img/icon_plus1.png) no-repeat 50% 50%;
+        }
+      }
+      &:nth-child(2){
+        .product_pluse{
+          background: url(../img/icon_plus2.png) no-repeat 50% 50%;
+        }
+      }
+      &:nth-child(3){
+        .product_pluse{
+          background: url(../img/icon_plus3.png) no-repeat 50% 50%;
+        }
+      }
+    }
+    .col-md-4{
+      padding: 34px 20px 34px 50px;
+      font-size: 18px;
+      font-weight: 600;
+      border-left: 1px solid #f1f1f1;
+
+      &:first-child{
+        border: 0;
+        padding-left: 65px;
+      }
+    }
+  }
+  .product_tabs{
+    .product_tabs_links{
+      display: flex;
+    }
+    .tablink{
+      height: 61px;
+      line-height: 62px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 600;
+      width: 50%;
+      background: #fff;
+      border-bottom: 1px solid #f3f3f3;
+      &:hover{
+        cursor: pointer;
+      }
+      &.active{
+        height: 62px;
+        background:#0000ff;
+        color:#fff;
+      }
+    }
+    .product_tab{
+      background: #fff;
+      padding: 35px 0 10px 50px;
+      .areas_icon{
+        width:96px;
+        height: 96px;
+      }
+      .product_area{
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+        margin-bottom: 30px;
+        .areas_icon{
+          margin-right: 20px;
+        }
+        &>div{
+          display: inline-block;
+          &:nth-child(2){
+            width:140px;
+            margin-right: 17px;
+          }
+        }
+        &:nth-child(1){
+          .areas_icon{
+            background: url(../img/icon_areas1.png);
+          }
+        }
+        &:nth-child(2){
+          .areas_icon{
+            background: url(../img/icon_areas2.png);
+          }
+        }
+        &:nth-child(3){
+          .areas_icon{
+            background: url(../img/icon_areas3.png);
+          }
+        }
+        &:nth-child(4){
+          .areas_icon{
+            background: url(../img/icon_areas4.png);
+          }
+        }
+        &:nth-child(5){
+          .areas_icon{
+            background: url(../img/icon_areas5.png);
+          }
+        }
+        &:nth-child(6){
+          .areas_icon{
+            background: url(../img/icon_areas6.png);
+          }
+        }
+      }
+    }
+  }
+  .productForm{
+    .mainFormLeft:before{
+      display: none;
+    }
+    .mainFormBlock{
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      padding:0;
+      .itemsRow{
+        width:562px;
+        .itemMedium{
+          width: 31%;
+          margin: 20px 0 0;
+          height: 110px;
+        }
+        .itemMediumThumb{
+          background-size: 50%;
+          background-position: 50%;
+          height: 100%;
+          width: 100%;
+          &:before{
+            content:none;
+          }
+        }
+        h2{
+          width:100%;
+          font-size: 48px;
+          font-weight: 900;
+          text-transform: uppercase;
+        }
+      }
+    }
+    .mainFormLeftHead{
+      padding: 31px 30px 8px!important;
+      font-size: 30px!important;
+      line-height: 36px!important;
+    }
+    .jiroInputs{
+      padding: 0 30px!important;
+    }
+    .jiroInputs .jiroFormGroup{
+      width: 100%!important;
+      flex:auto!important;
+      max-width: none!important;
+    }
+    .jiroInputs .btn{
+      width:100%;
+    }
+    .jiroInputs .jiroFormGroup{
+      margin-bottom: 5px!important;
+    }
+  }
+}
+.aboutPage{
+  h2{
+    width:100%;
+    font-weight: 900;
+    font-size: 48px;
+    padding-left: 8px;
+  }
+  .company_info{
+    background: #fff;
+    padding:16px 42px 24px;
+    border-left:1px solid #f3f3f3;
+    margin-bottom: 45px;
+    &:first-child{
+      border-left: none;
+    }
+    span{
+      color:#0057ff;
+      font-size:36px;
+      font-weight: 900;
+    }
+  }
+  .company_about{
+    margin-bottom: 77px;
+    background: #fff;
+    padding:45px 20px 38px 44px ;
+    h2{
+      font-size: 36px;
+      font-weight: bold;
+      line-height: 48px;
+      margin-bottom: 39px;
+    }
+    p{
+      margin-top: 30px;
+      line-height: 30px;
+      margin-bottom: 20px;
+    }
+  }
+  .company_img{
+    padding:0;
+    margin-bottom: 77px;
+    img{
+      max-width: 100%;
+    }
+  }
+  .aboutPrinciples {
+    margin-top: 47px;
+    overflow: hidden;
+    max-width:100%;
+    padding: 0 15px;
+    .aboutPrinciple {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin-bottom: 30px;
+      position: relative;
+      padding-top: 66px;
+      padding-right: 0;
+      padding-left: 0;
+      &:before {
+        content: '';
+        left: 34px;
+        width: 14px;
+        height: 14px;
+        top:0;
+        border-radius: 50px;
+        border:2px solid #f8f8f8;
+        z-index: 2;
+      }
+      &:after{
+        content: '';
+        top: 7px;
+        width: 100%;
+        height: 1px;
+      }
+      .aboutPrincipleIcon{
+        margin-left: 0;
+        background-size: contain;
+      }
+      .iQuality{
+        background-position: left;
+        width:58px;
+      }
+      .iTrust{
+        background-position: left;
+        width:60px;
+      }
+      .iContracts{
+        background-position: left;
+        width:62px;
+      }
+      .iFaster{
+        background-position: left;
+        width:80px;
+      }
+
+      &:before,&:after{
+        content: '';
+        position: absolute;
+        background: #0057ff;
+      }
+      .aboutPrincipleText {
+        font-size: 18px;
+        font-weight: 600;
+        color: #282828;
+      }
+    }
   }
 }
 
@@ -1518,23 +1881,23 @@ div.cs-skin-elastic {
 
 /*
 .cs-skin-elastic.cs-active .cs-options ul li:first-child {
-	-webkit-animation-delay: 0.1s;
-	animation-delay: 0.1s;
+-webkit-animation-delay: 0.1s;
+animation-delay: 0.1s;
 }
 
 .cs-skin-elastic.cs-active .cs-options ul li:nth-child(2) {
-	-webkit-animation-delay: 0.15s;
-	animation-delay: 0.15s;
+-webkit-animation-delay: 0.15s;
+animation-delay: 0.15s;
 }
 
 .cs-skin-elastic.cs-active .cs-options ul li:nth-child(3) {
-	-webkit-animation-delay: 0.2s;
-	animation-delay: 0.2s;
+-webkit-animation-delay: 0.2s;
+animation-delay: 0.2s;
 }
 
 .cs-skin-elastic.cs-active .cs-options ul li:nth-child(4) {
-	-webkit-animation-delay: 0.25s;
-	animation-delay: 0.25s;
+-webkit-animation-delay: 0.25s;
+animation-delay: 0.25s;
 }
 
 /* with more items, more delays declarations are needed */
@@ -1847,7 +2210,15 @@ footer {
   background-image: url(../img/iGPl.png);
   background-repeat: no-repeat;
 }
-
+.btn-outline-primary.downloadBtn{
+  background: url(../img/downloadPDF.png) no-repeat 27px 50%;
+  padding-left: 70px;
+  font-weight: bold;
+  &:hover{
+    color:#fff;
+    background: #0000ff url(../img/downloadPDF_hover.png) no-repeat 27px 50%;
+  }
+}
 .fancyboxPop {
   background: #fff;
   width: 560px;
@@ -1908,12 +2279,12 @@ footer {
 }
 
 /*!
- * Hamburgers
- * @description Tasty CSS-animated hamburgers
- * @author Jonathan Suh @jonsuh
- * @site https://jonsuh.com/hamburgers
- * @link https://github.com/jonsuh/hamburgers
- */
+* Hamburgers
+* @description Tasty CSS-animated hamburgers
+* @author Jonathan Suh @jonsuh
+* @site https://jonsuh.com/hamburgers
+* @link https://github.com/jonsuh/hamburgers
+*/
 
 .hamburger {
   padding: 13px 22px;
@@ -1989,8 +2360,8 @@ footer {
 }
 
 /*
-   * Spring Reverse
-   */
+* Spring Reverse
+*/
 
 .hamburger--spring-r {
   .hamburger-inner {
@@ -2160,6 +2531,9 @@ footer {
   .mainFormBlock {
     padding-top: 100px;
     padding-bottom: 100px;
+  }
+  .innerPageBottom .mainFormBlock .itemsRow{
+    width:387px;
   }
 }
 
@@ -2357,6 +2731,10 @@ footer {
   .headerMain .headerMainTop,.header .headerTop {
     padding-top: 15px;
   }
+  .innerPageBottom .mainFormBlock .itemsRow{
+    width: 100%;
+    margin-bottom: 30px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -2441,6 +2819,18 @@ footer {
     font-size: 22px;
     line-height: 35px;
   }
+  .btn-outline-primary.downloadBtn{
+    font-size: 14px;
+  }
+  .aboutPage .aboutPrinciples .aboutPrinciple{
+    padding-top: 24px;
+  }
+  .aboutPage .aboutPrinciples .aboutPrinciple:before{
+    left:20px;
+  }
+  .aboutPage .company_info{
+    margin-bottom: 20px;
+  }
 }
 
 @media screen and (max-width: 575px) {
@@ -2496,6 +2886,12 @@ footer {
   .mainFormBlock {
     padding-top: 15px;
     padding-bottom: 15px;
+  }
+  .aboutPage .company_info{
+    display: flex;
+    &>div{
+      margin-left: 20px;
+    }
   }
 }
 
