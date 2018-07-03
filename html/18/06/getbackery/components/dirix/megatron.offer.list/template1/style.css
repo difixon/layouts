@@ -1,0 +1,83 @@
+@media screen and (min-width:768px) {
+	.shopsList > .hr-title {font-size: 25px}
+}
+
+.shopsList .shopBlock {
+	margin-bottom: 15px;
+}
+.shopsList .shopBlock .shopInfo {
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	text-align: center;
+	transition: all 600ms;
+}
+.shopsList .shopBlock .shopInfo:hover {
+	border-color: #333;
+}
+.shopsList .shopBlock .shopInfo .seperator {
+	margin: 5px auto !important;
+}	
+.shopsList .shopBlock .shopInfo .seperator span {
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.shopFilters {
+	padding: 10px;
+	margin-bottom: 15px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	background-color: rgba(234, 234, 234, 0.3);
+/*
+	-webkit-box-shadow: inset 0 -3px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: inset 0 -3px rgba(0, 0, 0, 0.1);
+	box-shadow: inset 0 -3px rgba(0, 0, 0, 0.1);
+*/
+	-webkit-font-smoothing: antialiased;
+}
+
+.shopFilters h4, .shop-categories h4 {
+    font-size: 1.7rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+    padding: 0 0 10px;
+    color: rgba(0,0,0,0.8);
+    border-bottom-color: rgba(0,0,0,0.3) !important;
+}
+.shopFilters form input[type="text"] {
+	font-size: 16px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+.shopFilters select {
+	width: 100%;
+	height: 47px;
+	border: 1px solid #ccc;
+	background: #fff;
+	cursor: pointer;
+	font-style: initial;
+	font-size: 15px;
+	margin-bottom: 5px;
+	padding: 0 14px;
+}
+
+.shop-categories {
+	background-color: rgba(234, 234, 234, 0.3);
+    list-style-type: none;
+    padding: 10px 15px;
+	border-radius: 3px;
+}
+
+.shop-categories > li > a {
+    padding: 10px 5px;
+    display: block;
+    color: #333;
+    border-top: 1px dashed #ddd;
+    font-size: 15px;
+    font-weight: 300;
+    text-align: left;
+}
