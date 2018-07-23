@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'GP';
   src: url("../fonts/GothaProLig_0.otf") format("opentype");
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -9,7 +9,7 @@
 @font-face {
   font-family: 'GP';
   src: url("../fonts/GothaProLigIta_0.otf") format("opentype");
-  font-weight: 400;
+  font-weight: 300;
   font-style: italic;
 }
 
@@ -17,7 +17,7 @@
 @font-face {
   font-family: 'GP';
   src: url("../fonts/GothaProReg_0.otf") format("opentype");
-  font-weight: 500;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -25,7 +25,7 @@
 @font-face {
   font-family: 'GP';
   src: url("../fonts/GothaProIta_0.otf") format("opentype");
-  font-weight: 500;
+  font-weight: 400;
   font-style: italic;
 }
 
@@ -81,18 +81,28 @@ body{
   line-height: 24px;
   color:#353535;
   font-size: 14px;
-  font-weight: 500;
 }
-.home{
-  .mainheaders{
+h1{
+  font-size: 48px;
+  color:#000;
+  font-weight: bold;
+  text-align: center;
+  padding: 44px 0 40px;
+}
+.mainheaders{
     font-size: 48px;
     font-weight: bold;
     text-align: center;
     line-height: 52px;
     padding-top: 84px;
     margin-bottom: 64px;
-  }
+    &.small{
+      font-size: 36px;
+      padding-top: 50px;
+      margin-bottom: 33px;
+    }
 }
+
 .headerMain{
   .headerMainTop{
     .headerLogoInfo{
@@ -377,13 +387,19 @@ body{
       font-size: 24px;
       font-weight: bold;
       display: flex;
-      align-items: center; 
+      align-items: center;
       justify-content: space-between;
     }
     .whyus_text{
       padding: 33px 52px;
       color:#353535;
     }
+  }
+  .aboutUS{
+    line-height: 30px;
+    color:#000;
+    background: #fff;
+    padding: 43px 56px;
   }
 }
 .ourobjects{
@@ -441,6 +457,7 @@ body{
       font-size: 13px;
       text-decoration: none;
       margin-top: 54px;
+      line-height: 18px;
     }
     &:hover{
       text-decoration: none;
@@ -487,7 +504,6 @@ body{
       }
     }
     .footInfoRight{
-      padding-left: 50px;
       a{
         display: block;
       }
@@ -535,11 +551,65 @@ body{
         color: #fff;
         font-size: 13px;
         line-height: 18px;
+        align-items: center;
       }
     }
 
 }
+//aboutpage//
+.about .whyus{
+  background-color: #f0f3f5;
+}
+.about .ourobjects{
+  background-color: #fff;
+}
+.aboutStrongs{
+  background: url(../img/bg_pattern.png) #f0f3f5;
+  text-align: center;
+  padding: 125px 0 100px;
 
+  .aboutStrongs_title{
+    font-weight: bold;
+    color: #a80f12;
+    font-size: 24px;
+    margin-top: 60px;
+    margin-bottom: 24px;
+  }
+}
+//projecting_page
+.projecting{
+  background: url(../img/bg_pattern.png) #f0f3f5;
+  padding-bottom: 76px;
+  .aboutProjecting{
+    line-height: 30px;
+    color:#000;
+    background: #fff;
+    padding: 43px 56px;
+    margin-bottom: 30px;
+  }
+  .projecting_block{
+    background: #fff;
+    padding: 43px 56px;
+    color:#000;
+    line-height: 30px;
+    font-size: 18px;
+    margin-bottom: 30px;
+    width: 100%;
+    .projecting_text{
+      margin-top: 45px;
+    }
+  }
+  .row{
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    .col-md-4{
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+    }
+  }
+}
 //carousel//
 .multi-item-carousel{
   .showmore{
@@ -661,6 +731,38 @@ body{
   background: url(../img/icon_guarantees.png)  no-repeat 50%;
   width:60px;
   height:67px;
+}
+
+
+.icon_projecting_el{
+  background: url(../img/icon_projecting_el.png)  no-repeat 0 50%;
+  width:111px;
+  height:102px;
+}
+.icon_projecting_water{
+  background: url(../img/icon_projecting_water.png)  no-repeat 0 50%;
+  width:111px;
+  height:102px;
+}
+.icon_projecting_air{
+  background: url(../img/icon_projecting_air.png)  no-repeat 0 50%;
+  width:111px;
+  height:102px;
+}
+.icon_projecting_cond{
+  background: url(../img/icon_projecting_cond.png)  no-repeat 0 50%;
+  width:111px;
+  height:102px;
+}
+.icon_projecting_fire{
+  background: url(../img/icon_projecting_fire.png)  no-repeat 0 50%;
+  width:111px;
+  height:102px;
+}
+.icon_projecting_rec{
+  background: url(../img/icon_projecting_rec.png)  no-repeat 0 50%;
+  width:111px;
+  height:102px;
 }
 @media (min-width:768px){
   .hamburger{
