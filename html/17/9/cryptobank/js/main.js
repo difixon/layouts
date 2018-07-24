@@ -180,7 +180,7 @@ $(document).ready(function () {
      // Optional parameters
      nextButton: '.swiper-button-next',
      prevButton: '.swiper-button-prev',
-     slidesPerView: 'auto',
+     slidesPerView: '3',
      centeredSlides: true,
      paginationClickable: true,
      loop: true

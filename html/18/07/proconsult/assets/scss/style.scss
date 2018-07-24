@@ -109,6 +109,7 @@ h1{
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-flow: wrap;
       .headerLogoBlock{
         display: flex;
         align-items: center;
@@ -150,6 +151,10 @@ h1{
           display: block;
           color: #000;
           font-weight: 800;
+        }
+        .headerInfoLM{
+          display: flex;
+          flex-flow: wrap;
         }
         .headerInfoLeft{
           height: 100px;
@@ -471,6 +476,7 @@ h1{
   .container{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
   .futLogo{
     .footCopyrights{
@@ -580,6 +586,7 @@ h1{
 //aboutpage//
 .about .whyus{
   background-color: #f0f3f5;
+  padding-top: 0;
 }
 .about .ourobjects{
   background-color: #fff;
@@ -624,26 +631,117 @@ h1{
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    .col-md-4{
+    .col-lg-4{
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
     }
   }
 }
+//projecting_inner page
+.projecting_inner{
+  .work_areas {
+    padding-bottom: 100px;
+    .row .col-md-4{
+      align-items: center;
+    }
+    .work_area{
+      margin-top: 0;
+      margin-bottom: 30px;
+      padding: 42px 53px 30px;
+      p{
+        line-height: 30px;
+        color:#000;
+      }
+      .heading_medium {
+        padding-top: 17px;
+        padding-bottom: 15px;
+        h2{
+          font-size: 18px;
+          color: #000;
+          font-weight: bold;
+        }
+      }
+      ul{
+        padding-left: 10px;
+        li{
+          margin-bottom: 15px;
+          &:before{
+            width: 5px;
+            height: 2px;
+            left: -10px;
+          }
+        }
+      }
+      .work_area_title{
+        font-size: 30px;
+        color: #000;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-top: 0;
+      }
+    }
+  }
+}
+//areas_page
+.areas{
+  .work_areas {
+    padding-bottom: 100px;
+    .work_area{
+      margin-top: 0;
+    }
+  }
+}
+//ourobjects
+.objects{
+  .work_areas {
+    padding-bottom: 100px;
+    .row .col-md-4{
+      align-items: center;
+    }
+    .work_area{
+      margin-top: 0;
+      margin-bottom: 30px;
+      padding: 67px 53px 54px;
+      ul{
+        padding-left: 10px;
+        li{
+          margin-bottom: 15px;
+          &:before{
+            width: 5px;
+            height: 2px;
+            left: -10px;
+          }
+        }
+      }
+      .work_area_title{
+        font-size: 30px;
+        color: #000;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-top: 0;
+      }
+    }
+  }
+}
+//contacts
+.contacts{
+  background: url(../img/bg_pattern.png) #f0f3f5;
+}
 //carousel//
-.multi-item-carousel{
+
   .showmore{
     float: right;
     display: inline-block;
   }
   .carousel-control{
-    &-prev, &-next{
+    &-prev, &-next,&-prev1, &-next1{
       background-image: none;
       width: 68px;
       height: 68px;
       background: #e6e9ec;
       position: relative;
+      text-align: center;
       vertical-align: top;
       display: inline-block;
       opacity: 1;
@@ -680,7 +778,7 @@ h1{
   .carousel-inner{
     margin-bottom: 57px;
   }
-}
+
 //buttons//
 .btn.btn-outline-red{
   font-size: 14px;
@@ -785,8 +883,60 @@ h1{
   width:111px;
   height:102px;
 }
-@media (min-width:768px){
-  .hamburger{
-    display: none;
+
+.icon_prom_object{
+  background: url(../img/icon_prom_object.png)  no-repeat 0 50%;
+  width:152px;
+  height:142px;
+}
+.icon_city_object{
+  background: url(../img/icon_city_object.png)  no-repeat 0 50%;
+  width:152px;
+  height:142px;
+}
+.icon_pers_object{
+  background: url(../img/icon_pers_object.png)  no-repeat 0 50%;
+  width:152px;
+  height:142px;
+}
+@media (min-width: 992px) {
+  .hamburger {
+    display: none; } }
+@media(min-width:768px){
+
+}
+@media(min-width:576px){
+
+}
+.swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    box-sizing: content-box;
+}
+
+.swiper-layout{
+  overflow: hidden;
+   position:relative;
+  .row{
+    margin-left: -30px;
+    margin-right:-30px;
+    margin-bottom: 57px;
   }
+}
+.swiper-container1,.swiper-container {
+		width: 100%;
+		margin: 0 15px;
+    overflow: hidden;
+    position: relative;
+		.swiper-slide {
+				text-align: center;
+				font-size: 18px;
+				img {
+					vertical-align: middle;
+				}
+		}
 }
